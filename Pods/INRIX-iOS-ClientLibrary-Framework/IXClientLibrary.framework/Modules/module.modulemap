@@ -1,0 +1,6 @@
+framework module IXClientLibrary {
+  umbrella header "IXClientLibrary.h"
+
+  export *
+  module * { export * }
+}

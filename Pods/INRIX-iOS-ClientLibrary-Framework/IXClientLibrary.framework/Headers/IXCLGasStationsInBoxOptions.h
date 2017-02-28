@@ -1,0 +1,76 @@
+/*
+ * @header IXCLGasStationsInBoxOptions.h
+ * @abstract Represents request parameters for gas stations in a box.
+ * @author Patrick Winchell
+ * @updated 02-25-2015
+ * @copyright Copyright (c) 2015 INRIX, Inc.
+ *
+ *  INRIX is a registered trademark of INRIX, Inc.  Any copyright, patent and
+ *  trademark notice(s) contained herein or in related code, files or
+ *  documentation shall not be altered and shall be included in all copies and
+ *  substantial portions of the software. This software is "Source Code".
+ *  Refer to the License.pdf file for your rights to use this software.
+ */
+
+#import "IXCLGasStationBaseOptions.h"
+
+/*!
+ * @class IXCLGasStationsInBoxOptions
+ * @abstract Options for requesting gas stations within a box.
+ */
+@interface IXCLGasStationsInBoxOptions : IXCLGasStationBaseOptions <NSCopying>
+
+//-----------------------------------------------------------------------------
+#pragma mark - Properties
+
+/*!
+ * @abstract
+ *      The first corner of the region in which to get data.
+ * @discussion
+ *      The latitude and longitude values are expressed using the WGS 84 datum.
+ *      Northern latitudes are positive and southern latitudes are negative.
+ *      Eastern hemisphere longitudes are positive and western hemisphere
+ *      longitudes are negative.  Longitudes in North America are negative.
+ *      The corner specified by the corner1 parameter can be any of the four
+ *      corners of the bounding rectangle.
+ */
+@property (nonatomic, assign, readwrite) CLLocationCoordinate2D corner1;
+
+/*!
+ * @abstract The second corner of the region in which to get data.
+ * @discussion The corner2 parameter is diagonally opposite of corner1.
+ */
+@property (nonatomic, assign, readwrite) CLLocationCoordinate2D corner2;
+
+//-----------------------------------------------------------------------------
+#pragma mark - Methods
+
+/*!
+ * @abstract Initializes with specified corner1 and corner2 points.
+ *
+ * @param corner1 The first corner of the region in which to get data.
+ * @param corner2 The second corner of the region in which to get data.
+ *
+ * @return Instance of the IXCLGasStationsInBoxOptions class.
+ */
+- (instancetype) initWithCorner1: (CLLocationCoordinate2D) corner1
+                         corner2: (CLLocationCoordinate2D) corner2;
+
+/*!
+ * @abstract Initializes with specified corner1, corner2, outputFields and productTypes.
+ *
+ * @param corner1 The first corner of the region in which to get data.
+ * @param corner2 The second corner of the region in which to get data.
+ * @param outputFields
+ *      A valid IXCLGasStationOptionsOutputFieldMask.
+ * @param productTypes
+ *      A valid IXCLGasStationProductTypeMask.
+ *
+ * @return Instance of the IXCLGasStationsInBoxOptions class.
+ */
+- (instancetype) initWithCorner1: (CLLocationCoordinate2D) corner1
+                         corner2: (CLLocationCoordinate2D) corner2
+                    outputFields: (IXCLGasStationOptionsOutputFieldMask) outputFields
+                    productTypes: (IXCLGasStationProductTypeMask) productTypes;
+
+@end

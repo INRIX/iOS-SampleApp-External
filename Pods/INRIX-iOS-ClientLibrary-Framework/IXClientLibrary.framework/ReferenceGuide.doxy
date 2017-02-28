@@ -1,0 +1,430 @@
+/*
+ * @header ReferenceGuide.h
+ * @abstract Reference Guide Doxygen Structure Definition
+ * @author Kent Lottis
+ * @updated 06-09-2015
+ * @copyright Copyright (c) 2013-2015 INRIX, Inc.
+ *
+ *  INRIX is a registered trademark of INRIX, Inc.  Any copyright, patent and
+ *  trademark notice(s) contained herein or in related code, files or
+ *  documentation shall not be altered and shall be included in all copies and
+ *  substantial portions of the software. This software is "Source Code".
+ *  Refer to the License.pdf file for your rights to use this software.
+ */
+
+/*!
+ @mainpage INRIX Client Library
+ */
+
+/*!
+ @page InrixCore
+ The \<InrixCore\> protocol is the primary interface for calling INRIX @ref Services "web services".
+ It exposes a number of controller protocols that mediate communication between the client application and the INRIX services. 
+ The application creates a singleton InrixCore reference using the global @subpage IXCLCreateInrixCore function and performs all INRIX-related tasks through the InrixCore controller properties.
+
+ @section x Controller Protocols
+ 
+ Each major INRIX service is exposed via a <b>Controller Protocol</b> property on the primary \<InrixCore\> reference.
+
+ Gas Stations: \<IXCLGasStationsControllerProtocol\> \n
+ Traffic Tiles: \<IXCLTrafficTilesControllerProtocol\> \n
+ Traffic Cameras: \<IXCLCamerasControllerProtocol\> \n
+ Drive-Time Alerts: \<IXCLDriveTimeAlertsControllerProtocol\> \n
+ Incidents: \<IXCLIncidentsControllerProtocol\> \n
+ Itineraries: \<IXCLItineraryControllerProtocol\> \n
+ Locations: \<IXCLLocationsControllerProtocol\> \n
+ Parking Lots: \<IXCLParkingLotsControllerProtocol\> \n
+ Products: \<IXCLProductsControllerProtocol\> \n
+ Routes: \<IXCLRoutesControllerProtocol\> \n
+ Route Travel Times: \<IXCLRouteTravelTimesControllerProtocol\> \n
+ Route Updates: \<IXCLRouteUpdateControllerProtocol\> \n
+ Saved Trips: \<IXCLTripControllerProtocol\> \n
+ Search: \<IXCLSearchControllerProtocol\> \n
+ Traffic Quality: \<IXCLTrafficQualityControllerProtocol\> \n
+ Traffic Tiles: \<IXCLTrafficTilesControllerProtocol\> \n
+ Vehicle State Reporting: \<IXCLVehicleStateControllerProtocol\> \n
+ */
+
+/*!
+@page Services
+ The INRIX Client Library encapsulates the following INRIX Services:
+
+ @subpage DriveTimeAlerts\n
+ @subpage GasStations\n
+ @subpage Incidents\n
+ @subpage Itineraries\n
+ @subpage LocationsPage\n
+ @subpage ParkingLots\n
+ @subpage Products\n
+ @subpage Routes\n
+ @subpage SavedTrips\n
+ @subpage Search\n
+ @subpage TrafficCameras\n
+ @subpage TrafficQuality\n
+ @subpage TrafficTiles\n
+ @subpage VehicleState\n
+ */
+
+/*!
+ @page DataModel Data Models
+
+ @section Authentication
+ @ref IXCLAuthResponse\n
+ @ref IXCLPushToken\n
+ @ref IXCLUserAccount\n
+ @ref IXCLUserToken\n
+
+ @section GasStations Gas Stations
+ @ref IXCLFuelProduct\n
+ @ref IXCLGasStation\n
+ 
+ @section Incidents Incidents
+ @ref IXCLIncident\n
+ @ref IXCLIncidentCommunity\n
+ @ref IXCLIncidentContributor\n
+ @ref IXCLIncidentDelayImpact\n
+ @ref IXCLIncidentDescription\n
+ @ref IXCLIncidentParameterizedDescription\n
+ @ref IXCLXDIncident\n
+ @ref IXCLXDIncidentParameterizedDescription\n
+ @ref IXCLXDIncidentReoccurringSchedule\n
+
+ @section Locations Locations
+ @ref IXCLLocation\n
+ @ref IXCLSharingAddress\n
+
+ @section ParkingLots Parking Lots
+ @ref IXCLAddress\n
+ @ref IXCLParkingLot\n
+ @ref IXCLParkingLotCurrentCapacity\n
+ @ref IXCLParkingLotGate\n
+ @ref IXCLParkingLotOpeningHours\n
+ @ref IXCLParkingLotPricingPayment\n
+ @ref IXCLPhoto\n
+
+ @section Routes Routes
+ @ref IXCLBoundingBox\n
+ @ref IXCLRoad\n
+ @ref IXCLRoute\n
+ @ref IXCLRoutePoint\n
+ @ref IXCLRouteSummary\n
+ @ref IXCLRouteTravelTimes\n
+ @ref IXCLSpeedBucket\n
+ @ref IXCLTravelTime\n
+ @ref IXCLWaypoint\n
+
+ @section Search Search
+ @ref IXCLSearchResult\n
+
+ @section Trips Trips and Itineraries
+ @ref IXCLItineraryEntry\n
+ @ref IXCLLearnedTrip\n
+ @ref IXCLSavedTrip\n
+ @ref IXCLCalendarTrip\n
+ @ref IXCLTrip\n
+ @ref IXCLTripPoint\n
+ @ref IXCLTripSchedule\n
+ @ref IXCLTripScheduleDate\n
+ @ref IXCLTripScheduleNotification\n
+ @ref IXCLLearnedLocation\n
+ 
+ @section TrafficCameras Traffic Cameras
+ @ref IXCLCameraLicense\n
+ @ref IXCLCameraStatus\n
+ @ref IXCLServerCamera\n
+ 
+ @section TrafficQuality TrafficQuality
+ @ref IXCLTrafficQuality\n
+ */
+
+/*!
+ *******
+ 
+ @page RouteNotifications Route Notifications
+ The INRIX Client Library exposes several <b>NSNotification</b> messages and delegate subscriptions
+ that can be used to learn about changes to route status.
+
+ @section ial Incident Alerts
+ The @p IXCLDriveTimeAlertsIncidentsOnRouteNotification message is sent when there are new incidentes on the current active route.\n
+ The notification object is an @p NSDictionary with the following keys:
+ - @p IXCLDriveTimeAlertIncidentOnRouteCurrentRouteKey - An @ref IXCLRoute object for the current route\n
+ - @p ISCLDriveTimeAlertIncidentOnRouteIncidentsArrayKey - An @p NSArray of @ref IXCLIncident objects\n
+
+ @section fal Faster Route Alerts
+ The @p IXCLRouteUpdateFasterRouteAvailableNotification message is sent when the current route has a faster alternate available.\n
+ The notification object is an NSDictionary with the following keys:\n
+    - @p IXCLRouteUpdateCurrentRouteKey - An @ref IXCLRoute object for the current route\n
+    - @p IXCLRouteUpdateFasterRouteKey - An @ref IXCLRoute object for the faster alternate\n
+
+ @section orn Off-Route and Route-End Alerts
+ The @p IXCLRouteTrackingStatusChangedNotification message is sent when a route status changes.\n
+ The notification object is an NSDictionary with the following keys:\n
+ - @p IXCLRouteTrackingStatusRouteKey - An @ref IXCLRoute object for the current route\n
+ - @p IXCLRouteTrackingStatusLocationKey - A <b>CLLocation</b> object with the relevant location\n
+ - @p IXCLRouteTrackingStatusStatusKey - An IXCLRouteTrackingStatus enumeration indicating the new status. Possible values are:\n
+  -- @p IXCLRouteTrackingStatusOffRoute - The driver has driven off the selected route.\n
+  -- @p IXCLRouteTrackingStatusAtDestination - The drivr has reached the end of the selected route.
+
+ @section utt Updated ETA and Conditions
+ The @ref IXCLRouteUpdateController exposes an @p addSubcriber method that 
+ accepts a delegate that implements the @ref IXCLRouteUpdateSubscriber protocol.
+ The subscriber will receive notifications when the route changes, including udpates to ETA, traffic conditions, speed buckets, etc.
+
+ ****/
+
+/*!
+ @page DriveTimeAlerts Drive-Time Alerts
+ This service provide user the ability to save and restore custom places.
+
+ @section a Controllers
+
+ @ref IXCLDriveTimeAlertsController ""\n
+
+ @section c Options Classes
+ @ref IXCLDriveTimeAlertsOptions\n
+ */
+
+/*!
+ @page GasStations Gas Stations
+ This service displays gas stations in the specified area, and can 
+ display information on gas stations.
+
+ @section a Controllers
+ @ref IXCLGasStationsController\n
+
+ @section b Model Objects
+ @ref IXCLFuelProduct\n
+ @ref IXCLGasStation\n
+
+ @section c Options Classes
+ @ref IXCLGasStationsInBoxOptions\n
+ @ref IXCLGasStationsInRadiusOptions\n
+ @ref IXCLSingleGasStationOptions\n
+ */
+
+/*!
+ @page Incidents Incidents
+ Reports incidents such as accidents, construction, and other events.
+
+ @section a Controllers
+ @ref IXCLIncidentsController\n
+
+ @section b Model Objects
+ @ref IXCLIncident\n
+ @ref IXCLIncidentCommunity\n
+ @ref IXCLIncidentContributor\n
+ @ref IXCLIncidentDelayImpact\n
+ @ref IXCLIncidentDescription\n
+ @ref IXCLIncidentParameterizedDescription\n
+ @ref IXCLXDIncident\n
+ @ref IXCLXDIncidentParameterizedDescription\n
+ @ref IXCLXDIncidentReoccurringSchedule\n
+
+ @section c Options Classes
+ @ref IXCLIncidentDeleteOptions\n
+ @ref IXCLIncidentReportOptions\n
+ @ref IXCLIncidentReviewOptions\n
+ @ref IXCLIncidentsInBoxOptions\n
+ @ref IXCLIncidentsInRadiusOptions\n
+ @ref IXCLXDIncidentsInBoxOptions\n
+ @ref IXCLXDIncidentsInRadiusOptions\n
+ */
+
+/*!
+ @page Itineraries Itineraries
+ This service provide user the ability to retrieve trip itinerary information.
+ 
+ @section a Controllers
+ @ref IXCLItineraryController ""\n
+ 
+ @section b Model Objects
+ @ref IXCLItineraryEntry\n
+ 
+ @section c Options Classes
+ @ref IXCLItineraryOptions\n
+ */
+
+/*!
+ @page LocationsPage Saved Places
+ This service provide user the ability to save and restore custom places.
+
+ @section a Controllers
+ @ref IXCLLocationsController ""\n
+
+ @section b Model Objects
+ @ref IXCLLocation\n
+ @ref IXCLSharingAddress\n
+
+ @section c Options Classes
+ @ref IXCLLocationCreateOptions\n
+ @ref IXCLLocationUpdateOptions\n
+ @ref IXCLLocationsDeleteOptions\n
+ @ref IXCLLocationsReorderOptions\n
+ @ref IXCLLocationsRequestOptions\n
+ */
+
+/*!
+ @page ParkingLots Parking
+ Displays various types of parking available to the user.
+
+ @section a Controllers
+ @ref IXCLParkingLotsController\n
+
+ @section b Model Objects
+ @ref IXCLAddress\n
+ @ref IXCLParkingLot\n
+ @ref IXCLParkingLotCurrentCapacity\n
+ @ref IXCLParkingLotGate\n
+ @ref IXCLParkingLotOpeningHours\n
+ @ref IXCLParkingLotPricingPayment\n
+ @ref IXCLPhoto\n
+
+ @section c Options Classes
+ @ref IXCLParkingLotByIdOptions\n
+ @ref IXCLParkingLotsInBoxOptions\n
+ @ref IXCLParkingLotsInRadiusOptions\n
+ */
+
+/*!
+ @page Products
+ Allows SDK users check which products are available in the country in question.
+
+ @section a Controllers
+ @ref IXCLProductsController\n
+ */
+
+/*!
+ @page Routes
+ Displays and manages routes, route travel times, and route updating on a map.
+
+ @section a Controllers
+ @ref IXCLRoutesController\n
+ @ref IXCLRouteTravelTimesController\n
+ @ref IXCLRouteUpdateController\n
+
+ @section b Model Objects
+ @ref IXCLBoundingBox\n
+ @ref IXCLRoad\n
+ @ref IXCLRoute\n
+ @ref IXCLRoutePoint\n
+ @ref IXCLRouteSummary\n
+ @ref IXCLRouteTravelTimes\n
+ @ref IXCLSpeedBucket\n
+ @ref IXCLTravelTime\n
+ @ref IXCLWaypoint\n
+
+ @section c Options Classes
+ @ref IXCLUpdatedRouteOptions\n
+ @ref IXCLRoutesFromPointsOptions\n
+ @ref IXCLTravelTimesOptions\n
+ */
+
+/*!
+ @page SavedTrips  Trips
+ Displays and manages a user's saved trips.
+
+ @section a Controllers
+ @ref IXCLTripController\n
+
+ @section b Model Objects
+ @ref IXCLLearnedTrip\n
+ @ref IXCLSavedTrip\n
+ @ref IXCLCalendarTrip\n
+ @ref IXCLTrip\n
+ @ref IXCLTripPoint\n
+ @ref IXCLTripSchedule\n
+ @ref IXCLTripScheduleDate\n
+ @ref IXCLTripScheduleNotification\n
+
+ @section c Options Classes
+ @ref IXCLSavedTripOptions\n
+ */
+
+/*!
+ @page Search
+ Search on a map for nearby places of interest or exact addresses.
+
+ @section a Controllers
+ @ref IXCLSearchController\n
+
+ @section b Model Objects
+ @ref IXCLSearchResult\n
+
+ @section c Options Classes
+ @ref IXCLSearchOptions\n
+ */
+
+/*!
+ @page TrafficCameras Traffic Cameras
+ This service provides images from traffic cameras.
+
+ @section a Controllers
+ @ref IXCLCamerasController "Cameras Controller"
+
+ @section b Model Objects
+ @ref IXCLCameraLicense\n
+ @ref IXCLCameraStatus\n
+ @ref IXCLServerCamera\n
+
+ @section c Options Classes
+ @ref IXCLCameraImageOptions\n
+ @ref IXCLCamerasInBoxOptions\n
+ @ref IXCLCamerasOnRouteOptions\n
+ */
+
+/*!
+ @page TrafficQuality Traffic Quality
+ Queries for getting traffic quality information.
+
+ @section a Controllers
+ @ref IXCLTrafficQualityController\n
+
+ @section b Model Objects
+ @ref IXCLTrafficQuality\n
+
+ @section c Options Classes
+ @ref IXCLTrafficQualityOptions\n
+ */
+
+/*!
+ @page TrafficTiles Traffic Tiles
+ This service provides traffic-flow tiles information.
+
+ @section a Controllers
+ @ref IXCLTrafficTilesController "Traffic Tiles Controller"
+
+ @section b Model Objects
+ Traffic tiles are returned as UIImage objects.
+
+ @section c Options Classes
+ @ref IXCLTrafficTileOptions\n
+ */
+
+/*!
+ @page VehicleState Vehicle State
+ Get information on the state of the user's vehicle.
+
+ @section a Controllers
+ @ref IXCLVehicleStateController\n
+
+ @section b Model Objects
+ @ref IXCLVehicleStateMeasurement\n
+
+ @section c Options Classes
+ @ref IXCLRegisterVehicleOptions\n
+ @ref IXCLSendVehicleStateOptions\n
+ */
+
+// TODO: Debug Doxygen's apparent inability to discover and link to global function definitions.
+//       What follows below is a workaround.
+
+/*!
+ * @page IXCLCreateInrixCore IXCLCreateInrixCore()
+ *
+ * Creates a reference to an object that implements \<InrixCore\> protocol.
+ *
+ *  @p \#import \<InrixCore.h\>
+ *
+ * id \<InrixCore\> IXCLCreateInrixCore(@ref IXCLCoreOptions * options);
+ *
+ */

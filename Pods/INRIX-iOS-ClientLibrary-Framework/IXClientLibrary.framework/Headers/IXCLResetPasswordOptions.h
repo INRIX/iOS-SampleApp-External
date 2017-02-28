@@ -1,0 +1,27 @@
+/*
+ * @header IXCLResetPasswordOptions.h
+ * @abstract Represents request parameters for resetting user's password.
+ * @author Gaurav Agarwal
+ * @updated 11-26-2014
+ * @copyright Copyright (c) 2015 INRIX, Inc.
+ *
+ *  INRIX is a registered trademark of INRIX, Inc.  Any copyright, patent and
+ *  trademark notice(s) contained herein or in related code, files or
+ *  documentation shall not be altered and shall be included in all copies and
+ *  substantial portions of the software. This software is "Source Code".
+ *  Refer to the License.pdf file for your rights to use this software.
+ */
+
+#import "IXCLEmailOptions.h"
+
+
+//-----------------------------------------------------------------------------
+#pragma mark - Class Declaration
+
+/*!
+ * @class IXCLResetPasswordOptions
+ * @abstract Represents request parameters for resetting user's password.
+ */
+@interface IXCLResetPasswordOptions : IXCLEmailOptions <NSCopying>
+
+@end

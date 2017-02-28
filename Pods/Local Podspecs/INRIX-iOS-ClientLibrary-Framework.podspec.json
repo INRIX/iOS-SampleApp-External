@@ -1,0 +1,32 @@
+{
+  "name": "INRIX-iOS-ClientLibrary-Framework",
+  "version": "6.2.0",
+  "summary": "Provides access to data from INRIX web services.",
+  "description": "INRIX Client Library (SDK) for iOS.\n* Includes caches and networking objects for getting and using INRIX\ndata in an app.  The client library provides access to analytics\nincidents, location, PHS data collection and reporting, network\nreachability, routes, traffic quality and traffic tiles.",
+  "homepage": "https://github.com/INRIX/iOS-MobileSDK-External",
+  "license": {
+    "text": "                                Copyright 2016 INRIX, Inc.\n"
+  },
+  "authors": {
+    "INRIX Mobile Feedback": "mobilefeedback@inrix.com"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "git": "https://github.com/INRIX/iOS-MobileSDK-External.git"
+  },
+  "xcconfig": {
+    "GCC_PREPROCESSOR_DEFINITIONS": "$(inherited) IXCL_FRAMEWORK=1"
+  },
+  "ios": {
+    "vendored_frameworks": "IXClientLibrary.framework"
+  },
+  "preserve_paths": "IXClientLibrary.framework",
+  "public_header_files": "IXClientLibrary.framework/Headers/*.h",
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.6.0"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+../../../../INRIX-iOS-ClientLibrary-Framework/IXClientLibrary.framework/Headers/NSString+IXCL.h

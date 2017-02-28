@@ -1,0 +1,1 @@
+../../../../INRIX-iOS-ClientLibrary-Framework/IXClientLibrary.framework/Headers/NSDateFormatter+IXCL.h
