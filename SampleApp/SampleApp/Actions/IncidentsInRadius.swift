@@ -17,7 +17,7 @@ import Foundation
 
 class IncidentsInRadius: SampleAction {
     required init () {}
-    static let description = "Returns incidents found in the radius arround a coordinate."
+    static let description = "Returns incidents found in the radius around a coordinate."
     static let category = CategoryConstants.incidents
 
     static let defaults: [String : ParamValue] = [ParameterConstants.radius : CommonConstants.radiusSeattle,
@@ -36,8 +36,8 @@ class IncidentsInRadius: SampleAction {
         core.incidentsController.requestIncidentsInRadius(with: options, incidentsFilter: filter) {
             (incidents: [Any]?, response: IXCLCoreResponse?) in
 
-            if let error = response?.error as? NSError {
-                completionHandler(nil, error, false)
+            if let error = response?.error {
+                completionHandler(nil, (error as NSError), false)
             } else if let incidents = incidents {
                 let mappedIncidents = incidents.flatMap({ $0 as? IXCLIncident })
 

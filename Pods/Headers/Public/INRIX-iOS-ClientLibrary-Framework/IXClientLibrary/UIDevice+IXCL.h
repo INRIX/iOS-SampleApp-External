@@ -1,1 +1,0 @@
-../../../../INRIX-iOS-ClientLibrary-Framework/IXClientLibrary.framework/Headers/UIDevice+IXCL.h

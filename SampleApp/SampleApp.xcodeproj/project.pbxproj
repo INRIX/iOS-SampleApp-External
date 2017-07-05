@@ -60,9 +60,6 @@
 		7DD869151D83348B0016DDEE /* VeryDraggableAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD869141D83348B0016DDEE /* VeryDraggableAnnotationView.swift */; };
 		7DD869171D8348DA0016DDEE /* FindRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD869161D8348DA0016DDEE /* FindRoute.swift */; };
 		7DD869191D8354F30016DDEE /* ParkingInBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD869181D8354F30016DDEE /* ParkingInBox.swift */; };
-		7DF788681DF7635400A9310B /* *.inrix.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7DF788651DF7635400A9310B /* *.inrix.com.cer */; };
-		7DF788691DF7635400A9310B /* GlobalSign Organization Validation CA - SHA256 - G2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7DF788661DF7635400A9310B /* GlobalSign Organization Validation CA - SHA256 - G2.cer */; };
-		7DF7886A1DF7635400A9310B /* GlobalSign Root CA.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7DF788671DF7635400A9310B /* GlobalSign Root CA.cer */; };
 		7DFE021E1D74D40B00346EEB /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFE021D1D74D40B00346EEB /* Core.swift */; };
 		9589E95DA91E077AA5F3CC45 /* libPods-SampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F81E9524D3C51C03758C7F5 /* libPods-SampleApp.a */; };
 		B03897391D7772E20033174D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03897381D7772E20033174D /* SettingsViewController.swift */; };
@@ -102,7 +99,7 @@
 		7D8A47A01D6F8B2300AB06B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D8A47A21D6F8B2300AB06B8 /* ClassListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassListViewController.swift; sourceTree = "<group>"; };
 		7D8A47A51D6F8B2300AB06B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7D8A47A71D6F8B2300AB06B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D8A47A71D6F8B2300AB06B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		7D8A47AA1D6F8B2300AB06B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D8A47AC1D6F8B2300AB06B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DA6CF271E60DC0600CBDCD8 /* UISliderWithBlock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderWithBlock.swift; sourceTree = "<group>"; };
@@ -131,9 +128,6 @@
 		7DD869141D83348B0016DDEE /* VeryDraggableAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VeryDraggableAnnotationView.swift; sourceTree = "<group>"; };
 		7DD869161D8348DA0016DDEE /* FindRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindRoute.swift; sourceTree = "<group>"; };
 		7DD869181D8354F30016DDEE /* ParkingInBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingInBox.swift; sourceTree = "<group>"; };
-		7DF788651DF7635400A9310B /* *.inrix.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.inrix.com.cer"; sourceTree = "<group>"; };
-		7DF788661DF7635400A9310B /* GlobalSign Organization Validation CA - SHA256 - G2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlobalSign Organization Validation CA - SHA256 - G2.cer"; sourceTree = "<group>"; };
-		7DF788671DF7635400A9310B /* GlobalSign Root CA.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GlobalSign Root CA.cer"; sourceTree = "<group>"; };
 		7DFE021D1D74D40B00346EEB /* Core.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		7DFE021F1D74D4B500346EEB /* SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		B03897381D7772E20033174D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -191,9 +185,7 @@
 		7D7400521D74E99B00008DA2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7DF788651DF7635400A9310B /* *.inrix.com.cer */,
-				7DF788661DF7635400A9310B /* GlobalSign Organization Validation CA - SHA256 - G2.cer */,
-				7DF788671DF7635400A9310B /* GlobalSign Root CA.cer */,
+				7D8A47A71D6F8B2300AB06B8 /* Assets.xcassets */,
 				7D8A47AC1D6F8B2300AB06B8 /* Info.plist */,
 				7DFE021F1D74D4B500346EEB /* SampleApp-Bridging-Header.h */,
 			);
@@ -222,17 +214,16 @@
 			isa = PBXGroup;
 			children = (
 				7DC5CA391D75FBDB008C0807 /* Actions */,
-				7D20DE3F1E5F8317009975E4 /* Extensions */,
-				7DC5CA401D760147008C0807 /* Protocols */,
-				7D20DE491E5F8499009975E4 /* Utility */,
-				7DC5CA381D75FBC6008C0807 /* View Controllers */,
 				7D8A47A01D6F8B2300AB06B8 /* AppDelegate.swift */,
 				7D20DE4C1E5F88BC009975E4 /* CommonConstants.swift */,
 				7DFE021D1D74D40B00346EEB /* Core.swift */,
 				7D75719A1D70DDD30070EBA3 /* KeysAndSettings.swift */,
-				7D8A47A41D6F8B2300AB06B8 /* Main.storyboard */,
 				7D8A47A91D6F8B2300AB06B8 /* LaunchScreen.storyboard */,
-				7D8A47A71D6F8B2300AB06B8 /* Assets.xcassets */,
+				7D8A47A41D6F8B2300AB06B8 /* Main.storyboard */,
+				7D20DE3F1E5F8317009975E4 /* Extensions */,
+				7DC5CA401D760147008C0807 /* Protocols */,
+				7D20DE491E5F8499009975E4 /* Utility */,
+				7DC5CA381D75FBC6008C0807 /* View Controllers */,
 				7D7400521D74E99B00008DA2 /* Support Files */,
 			);
 			path = SampleApp;
@@ -414,10 +405,7 @@
 			files = (
 				7D8A47AB1D6F8B2300AB06B8 /* LaunchScreen.storyboard in Resources */,
 				7D8A47A81D6F8B2300AB06B8 /* Assets.xcassets in Resources */,
-				7DF7886A1DF7635400A9310B /* GlobalSign Root CA.cer in Resources */,
 				7D8A47A61D6F8B2300AB06B8 /* Main.storyboard in Resources */,
-				7DF788691DF7635400A9310B /* GlobalSign Organization Validation CA - SHA256 - G2.cer in Resources */,
-				7DF788681DF7635400A9310B /* *.inrix.com.cer in Resources */,
 				B06C27A81D78AA9F00398EC3 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,7 +425,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		70E06F0AECDC30C2E82709A4 /* [CP] Copy Pods Resources */ = {
@@ -651,7 +639,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9F65JSR8F4;
 				INFOPLIST_FILE = "SampleApp/Support Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inrixInternal.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,7 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9F65JSR8F4;
 				INFOPLIST_FILE = "SampleApp/Support Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inrixInternal.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";

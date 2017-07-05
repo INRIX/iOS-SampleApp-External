@@ -13,6 +13,5 @@ project 'SampleApp/SampleApp.xcodeproj'
 
 target 'SampleApp'
 
-pod 'AFNetworking',       '~> 2.6.3'
-pod 'INRIX-iOS-ClientLibrary-Framework', :git => "https://github.com/INRIX/iOS-MobileSDK-External.git"
+pod 'INRIX-iOS-ClientLibrary'
 pod 'FBSDKLoginKit'

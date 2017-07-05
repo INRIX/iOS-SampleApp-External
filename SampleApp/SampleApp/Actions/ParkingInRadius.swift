@@ -36,8 +36,8 @@ class ParkingInRadius: SampleAction {
         options?.parkingType = parkingType
 
         core.parkingLotsController.requestParkingLotsInRadius(with: options) { (parking: [Any]?, response: IXCLCoreResponse?) in
-            if let error = response?.error as? NSError {
-                completionHandler(nil, error, false)
+            if let error = response?.error {
+                completionHandler(nil, (error as NSError), false)
             } else if let parking = parking {
                 let mappedParking = parking.flatMap({ $0 as? IXCLParkingObjectProtocol })
 

@@ -1,59 +1,26 @@
 PODS:
-  - AFNetworking (2.6.3):
-    - AFNetworking/NSURLConnection (= 2.6.3)
-    - AFNetworking/NSURLSession (= 2.6.3)
-    - AFNetworking/Reachability (= 2.6.3)
-    - AFNetworking/Security (= 2.6.3)
-    - AFNetworking/Serialization (= 2.6.3)
-    - AFNetworking/UIKit (= 2.6.3)
-  - AFNetworking/NSURLConnection (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.3):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.3)
-  - AFNetworking/Security (2.6.3)
-  - AFNetworking/Serialization (2.6.3)
-  - AFNetworking/UIKit (2.6.3):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - FBSDKCoreKit (4.19.0):
+  - FBSDKCoreKit (4.24.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.19.0):
+  - FBSDKLoginKit (4.24.0):
     - FBSDKCoreKit
-  - INRIX-iOS-ClientLibrary-Framework (6.2.0):
-    - AFNetworking (~> 2.6.0)
+  - INRIX-iOS-ClientLibrary (7.0.0)
 
 DEPENDENCIES:
-  - AFNetworking (~> 2.6.3)
   - FBSDKLoginKit
-  - INRIX-iOS-ClientLibrary-Framework (from `https://github.com/INRIX/iOS-MobileSDK-External.git`)
-
-EXTERNAL SOURCES:
-  INRIX-iOS-ClientLibrary-Framework:
-    :git: https://github.com/INRIX/iOS-MobileSDK-External.git
-
-CHECKOUT OPTIONS:
-  INRIX-iOS-ClientLibrary-Framework:
-    :commit: e47a6b27f64427c738c148382751897450d0746e
-    :git: https://github.com/INRIX/iOS-MobileSDK-External.git
+  - INRIX-iOS-ClientLibrary
 
 SPEC CHECKSUMS:
-  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  FBSDKCoreKit: 894b2b6eda6a4c8c4204e92e59cc355709ef045c
-  FBSDKLoginKit: 83ca4d8f12a2022570af9fd6aacf27f6b425b99f
-  INRIX-iOS-ClientLibrary-Framework: 4cdad7c0a794802aa515d6b49a09960047ffa21f
+  FBSDKCoreKit: f8c9eb0dd34a9cd277c7b60da4b32226d142502d
+  FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
+  INRIX-iOS-ClientLibrary: 79ab16c20ff0b7d37db7353791a856fc2bc7c4c6
 
-PODFILE CHECKSUM: 1bd397bba5fb5ba00da89709aab12b4a3cb9cb8d
+PODFILE CHECKSUM: 8a6ce10d258d95846d19433093dc548ae2aa1218
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

@@ -141,7 +141,13 @@ class QuadkeyTileOverlayRender : MKTileOverlayRenderer {
         let zoom = Int(floor((20 + log(zoomScale) / log(2)) + 1.51))
         let quadkey = Quadkey(coordinate: MKCoordinateForMapPoint(mapRect.origin), zoomLevel: zoom - 1)
         let quadkeyValue = quadkey.toString()
-        let attributes = [NSFontAttributeName : UIFont.monospacedDigitSystemFont(ofSize: fontSize, weight: UIFontWeightRegular)]
+        
+        var font = UIFont.systemFont(ofSize: fontSize)
+        if #available(iOS 9.0, *) {
+            font = UIFont.monospacedDigitSystemFont(ofSize: fontSize, weight: UIFontWeightRegular)
+        }
+        
+        let attributes = [NSFontAttributeName : font]
 
         // Create the Core Text framesetter using the attributed string.
         let framesetter = CTFramesetterCreateWithAttributedString(NSAttributedString(string: quadkeyValue, attributes: attributes))

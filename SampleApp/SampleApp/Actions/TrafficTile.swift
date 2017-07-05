@@ -21,8 +21,8 @@ class TrafficTiles: SampleAction {
     static let category = CategoryConstants.trafficTiles
 
     static let defaults: [String : ParamValue] = [ParameterConstants.quadkey : CommonConstants.quadkeyDowntownSeattle,
-                                                  ParameterConstants.penWidth : RangedParamValue<UInt>(value: 1, range: Range(uncheckedBounds: (lower: 1, upper: 16))),
-                                                  ParameterConstants.opacity : RangedParamValue<UInt>(value: 90, range: Range(uncheckedBounds: (lower: 1, upper: 100))),
+                                                  ParameterConstants.penWidth : RangedParamValue<UInt>(value: 1, range: 1..<16 ),
+                                                  ParameterConstants.opacity : RangedParamValue<UInt>(value: 90, range: 1..<100 ),
                                                   ParameterConstants.frcMask : IXCLTrafficTileOptionsFRCLevelMask.maskAll]
 
     func performAction(core: InrixCore, values: [String : ParamValue], completionHandler: @escaping ActionCompletionHandler) {
@@ -44,8 +44,8 @@ class TrafficTiles: SampleAction {
         core.trafficTilesController.requestTrafficTile(with: options) {
             (image: UIImage?, response: IXCLCoreResponse?) in
 
-            if let error = response?.error as? NSError {
-                completionHandler(nil, error, false)
+            if let error = response?.error {
+                completionHandler(nil, (error as NSError), false)
             } else {
                 completionHandler(ImageResultsController(image: image), response?.error, image != nil)
             }

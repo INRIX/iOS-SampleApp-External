@@ -34,6 +34,8 @@ extension IXCLIncident : MKAnnotationWithImage {
             return "Fixed Camera Trap"
         case .hazard:
             return "Hazard"
+        case .laneClosure:
+            return "Lane Closure"
         case .police:
             return "Police"
         case .roadClosure:
@@ -68,6 +70,8 @@ extension IXCLIncident : MKAnnotationWithImage {
             return #imageLiteral(resourceName: "CameraPin")
         case .hazard:
             return #imageLiteral(resourceName: "HazardPin")
+        case .laneClosure:
+            return #imageLiteral(resourceName: "LaneClosurePin")
         case .police:
             return #imageLiteral(resourceName: "PolicePin")
         case .roadClosure:
@@ -99,14 +103,12 @@ extension IXCLParkingBlock : MKAnnotationWithImage {
     var image: UIImage? { return #imageLiteral(resourceName: "ParkingBlockPin") }
 }
 
-extension IXCLDangerousSlowdown : MKAnnotation {
-    public var title: String? { return "Dangerous Slowdown" }
+extension IXCLDangerousSlowdown : MKAnnotationWithImage {
+    public override var title: String? { return "Dangerous Slowdown" }
     public var subtitle: String? {
         return self.slowdownDescription?.roadNames?.first as? String
     }
-}
 
-extension IXCLDangerousSlowdown : MKAnnotationWithImage {
     var image: UIImage? {
         switch self.severity {
         case .severity1:

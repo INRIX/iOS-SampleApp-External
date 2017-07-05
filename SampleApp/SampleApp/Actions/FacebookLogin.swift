@@ -72,6 +72,33 @@ class FacebookLoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         self.view.addSubview(textView)
         self.textView = textView
         self.updateTextField()
+        
+        // Check that the app's plist url schemes has the scheme to match the facebook key.
+        var hasValidFBKey = false
+        if let urlTypes = Bundle.main.infoDictionary?["CFBundleURLTypes"] as? [Any] {
+            for item in urlTypes {
+                if let item = item as? [String : Any] {
+                    if let schemes = item["CFBundleURLSchemes"] as? [String] {
+                        for scheme in schemes {
+                            if scheme == "fb" + KeysAndSettings.facebookApplicationId {
+                                hasValidFBKey = true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        if hasValidFBKey == false {
+            let alertController = UIAlertController(title: "Invalid facebook plist key", message: "Make sure that your info.plist file has the url scheme that matches your facebook key.", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alertController.addAction(UIAlertAction(title: "OK", style: .default) {
+                [weak self] (action: UIAlertAction) in
+                self?.navigationController?.popViewController(animated: true)
+            })
+            
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
 
     /// If the user has used FBSDKLoginButton use their Facebook token to log into INRIX.

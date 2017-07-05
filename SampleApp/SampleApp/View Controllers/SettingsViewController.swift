@@ -45,6 +45,8 @@ class SettingsViewController: UITableViewController {
             return max
         }()
     }
+    
+    let rows = [Row.about]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,27 +61,23 @@ class SettingsViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Row.count
+        return rows.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
 
-        if let row = Row(rawValue: indexPath.row) {
-            cell.textLabel?.text = row.title.capitalized(with: Locale.current)
-            cell.accessoryType = .disclosureIndicator
-            return cell
-        }
-
+        let row = rows[indexPath.row]
+        cell.textLabel?.text = row.title.capitalized(with: Locale.current)
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let row = Row(rawValue: indexPath.row) {
-            if let viewController = row.viewController {
-                self.navigationController?.pushViewController(viewController, animated: true)
-            }
+        let row = rows[indexPath.row]
+        if let viewController = row.viewController {
+            self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
 

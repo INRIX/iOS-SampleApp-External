@@ -1,29 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## AFNetworking
-
-Copyright (c) 2011–2015 Alamofire Software Foundation (http://alamofire.org/)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
 ## Bolts
 
 BSD License
@@ -99,8 +76,64 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-## INRIX-iOS-ClientLibrary-Framework
+## INRIX-iOS-ClientLibrary
 
-Copyright 2016 INRIX, Inc.
+INRIX SDK AGREEMENT 
+By using the SDK (as defined below), you agree to the following terms.  If you do not accept them, do not use the SDK. 
+This SDK Agreement (this Agreement) is entered into between the user (Licensee) of the INRIX SDK (as defined below) and INRIX, Inc. (INRIX). Review SDKLicense.pdf for the officially recognized legal document.
+    
+1. 	DEFINITIONS 
+    1.1 SDK or Software Development Kit means the contents of any file, disk, CD-ROM, or other media provided or made available by INRIX to Licensee under this Agreement, including the APIs, Documentation, Redistributable Code, Sounds, Imagery, Source Code and Sample Code. 
+    1.2 Application means an application developed by Licensee that incorporates the SDK. 
+    1.3 API means application programming interface provided in the SDK that provides access to the INRIX Service.    
+    1.4 Authorized Service means any INRIX Service or any service that incorporates or operates in conjunction with an INRIX Service. 
+    1.5 Documentation means any documentation or materials provided or made available by INRIX to Licensee under this Agreement, including documentation and materials describing an SDK. 
+    1.6 INRIX Service means any service provided by or for INRIX. 
+    1.7 Redistributable Code means any Sample Code, Source Code, Imagery or Sounds in object code format provided or made available by INRIX to Licensee under this Agreement. 
+    1.8 Sample Code means any SDK source code labeled Sample provided or made available by INRIX to Licensee under this Agreement. 
+    1.9 Source Code means any SDK source code labeled Source provided or made available by INRIX to Licensee under this Agreement. 
+    1.10 Imagery means any PNG or other graphic images provided or made available by INRIX to Licensee under this Agreement. 
+    1.11 Sounds means any MP3 or other sound files provided or made available by INRIX to Licensee under this Agreement. 
+ 
+2. 	LICENSE GRANT AND RESTRICTIONS 
+    2.1 License Grant.  Subject to the terms and conditions of this Agreement, INRIX hereby grants to Licensee a limited, non-exclusive, nonsublicenseable, nontransferable license to: (a) internally use a reasonable number of copies of the SDK in strict accordance with the Documentation solely to develop and test Applications that are capable of interconnection with an Authorized Service (and not with any other service or product); (b) reproduce and internally modify the Sample Code solely as a component of an Application; (c) reproduce the Redistributable Code solely as a component of an Application; and (d) distribute the Sample Code and Redistributable Code only in object code format solely as a component of an Application. 
+    2.2 License Restrictions.  The licenses granted to Licensee in this Agreement do not include any right to, and Licensee will not: (a) modify the Documentation, change any of the interfaces described in the Documentation, or extend any interfaces except as described in the Documentation; (b) implement the SDK in any software other than a Application or to support any interfaces between computing devices or computing functions other than as expressly required interconnect with an Authorized Service; (c) modify, translate, or create a derivative work of any portion of the SDK except for the limited right to modify the Sample Code as expressly set forth in Section 2.1; (d) sell, lease, loan, provide, distribute or otherwise transfer any portion of the SDK to any third party except for the limited right to distribute the Sample Code and Redistributable Code as expressly set forth in Section 2.1; (e) reverse engineer, disassemble, decompile, or otherwise attempt to gain access to the source code of the SDK except for the Sample Code and except to the extent permitted by applicable law; (f) display or disclose any portion of the SDK to any person except to Licensee's employees and contractors who are required to use the SDK in order for Licensee to develop the Application for use with an Authorized Service and except for the limited right to distribute the Sample Code and Redistributable Code as expressly set forth in Section 2.1; (g) use the SDK for training, commercial time-sharing, service bureau, subscription service, or rental use; (h) remove, alter, or cover any copyright notices or other proprietary rights notices placed or embedded on or in any part of the SDK; (i) use the SDK to create or develop any command set, application or other application programming interface or software (including without limitation the Application) that can be used with any service or product other than an Authorized Service; (j) create or develop any application or other software (including the Application) that exposes or discloses the SDK to end users; (k) interfere with the normal operation of the SDK; (l) release or otherwise commercially distribute to third parties any Application that is not fully compatible with the SDK; (m) disable or circumvent any license key or other security features of an Authorized Service; or (n) cause or permit any third party to do any of the foregoing.   
+    2.3 No Warranties.  Licensee must not make any representation or any express or implied warranty to third parties (including, without limitation, to any end users) on behalf of INRIX.  
+    2.4 Open Source Restriction.  Nothing in this Agreement authorizes Licensee to subject any portion of the SDK or any INRIX intellectual property right in any portion of the SDK to the terms of any open source license, including a license that requires, as a condition of use, modification, or distribution of technology subject to such license, that such technology or other technology combined or distributed with such technology (a) be disclosed or distributed in source code form; (b) be licensed for the purpose of making derivative works; or (c) be re-distributable at no charge. 
+	2.5 	Use and Availability of Authorized Services 
+           (a) End User.  Licensee will promptly notify INRIX of any end user that intends to use an Application to integrate with an Authorized Service.  The provision of an Application does not grant to the end user any rights to use an Authorized Service, including an INRIX Service.  The use of an Authorized Service, including an INRIX Service, is subject to the end user obtaining appropriate rights to use the Authorized Service, which may require the payment of applicable licensing or service fees. 
+           (b) Availability of Authorized Services.  INRIX does not guarantee that it will continue to make available or support any Service or that any party will continue to make available or support any Authorized Service. 
+    2.6 Feedback.  If Licensee provides any feedback to INRIX concerning the functionality and performance of the SDK or INRIX Services (including identifying potential errors and improvements), Licensee hereby assigns to INRIX all right, title, and interest in and to the feedback, and INRIX is free to use the feedback without payment or restriction. 
+    2.7 Reservation of Rights.  All rights not expressly granted in this Agreement are reserved.  No additional rights whatsoever (including, without limitation, any implied licenses) are granted by implication, estoppel or otherwise. 
+3. 	DELIVERY, SUPPORT, AND CERTIFICATION 
+    3.1 Delivery of SDK.  Upon the execution of this Agreement, INRIX will deliver a copy of the SDK to Licensee.  INRIX may, in its sole discretion, provide replacements, updates, modifications, or bug fixes for the SDK to Licensee during the term of this Agreement ("Updated SDK").  Each Updated SDK will be deemed part of the SDK and subject to the terms of this Agreement.  Modified or merged portions of the Sample Code or Redistributable Code will be deemed part of the Sample Code or Redistributable Code, as applicable, and subject to the terms of this Agreement.  Licensee will ensure that, prior to commercially releasing any Application, each Application will be fully compatible with the most recent Updated SDK, if any. 
+    3.2 Support.  INRIX will in its discretion endeavor to provide Licensee assistance with the SDK.  INRIX will have no other support or service obligations under this Agreement. 
+    3.3 Distributing.  Licensee will not distribute any Application, other than a prototype for testing purposes, prior to receiving confirmation that INRIX's testing is completed, the Application has been approved, and a commercial license is in place with the Licensee. 
+4. 	CONFIDENTIALITY 
+    4.1 Confidential Information.  Confidential Information means any trade secrets or other information of a party or its affiliates, whether of a technical, business, or other nature (including, without limitation, information relating to a party's or its affiliates' technology, software, products, services, designs, methodologies, business plans, finances, marketing plans, licensees, prospects, or other affairs), that is disclosed to a party during the term of this Agreement and that such party knows or has reason to know is confidential, proprietary, or trade secret information of the disclosing party.  The SDK is the Confidential Information of INRIX.  Confidential Information does not include any information that the receiving party can show: (a) was known to the receiving party prior to receiving the same from the disclosing party in connection with this Agreement; (b) is independently developed by the receiving party without use of or reference to the Confidential Information of the disclosing party; (c) is acquired by the receiving party from another source without restriction as to use or disclosure; or (d) is or becomes part of the public domain through no fault or action of the receiving party. 
+    4.2 Restricted Use and Nondisclosure.  During and after the term of this Agreement, each party will: (a) use the other party's Confidential Information solely for the purpose for which it is provided (in Licensee's case, solely for the purpose of developing Applications); 
+(b) not disclose the other party's Confidential Information to a third party unless the third party must access the Confidential Information to perform in accordance with this Agreement and the third party has executed a written agreement that contains terms that are substantially similar to the terms contained in this Section 4; and (c) protect the other party's Confidential Information from unauthorized use and disclosure to the same extent (but using no less than a reasonable degree of care) that it protects its own Confidential Information of a similar nature.  INRIX is permitted to disclose Licensee's Confidential Information to its affiliates. 
+    4.3 Required Disclosure.  If either party is required by law to disclose the Confidential Information or the terms of this Agreement, the disclosing party must give prompt written notice of such requirement before such disclosure and assist the non-disclosing party in obtaining an order protecting the Confidential Information from public disclosure. 
+    4.4 Return of Materials.  Upon the termination or expiration of this Agreement, or upon earlier request, each party will deliver to the other all Confidential Information that they may have in their possession or control. 
+    4.5 Existing Obligations.  The obligations in this Section 4 are in addition to, and supplement, each party's obligations of confidentiality under any nondisclosure or other agreement between the parties containing nondisclosure obligations. 
+5. 	TERM AND TERMINATION 
+    5.1 Term.  The term of this Agreement will commence on the Effective Date and continue in effect until terminated in accordance with the provisions of this Agreement. 
+    5.2 Termination.  Licensee may terminate this Agreement at any time upon written notice to INRIX.  INRIX may terminate this Agreement (a) immediately upon written notice, if Licensee is in material breach of Section 2; (b) if Licensee otherwise materially breaches this Agreement and fails to cure the breach within 30 days after Licensee receives notice of the breach from INRIX; or (c) immediately, if Licensee asserts any claim of patent infringement against INRIX based on patents reading on any portion of the SDK.  Upon termination, Licensee's licenses under this Agreement will end and Licensee will cease all use of the SDK and will return or destroy all copies of the SDK in its possession, except that Licensee may continue to distribute Applications that were fully certified prior to termination.  
+    5.3 Survival.  Sections 2.3, 2.6, 2.7, 4, 5.2, 5.3, 6, 7, and 8 will survive any termination of this Agreement.  Licenses granted prior to the termination of this Agreement by Licensee to end users for Applications in accordance with the terms of this Agreement will survive any termination of this Agreement. 
+6. 	DISCLAIMERS OF WARRANTY 
+    6.1 Disclaimers.  THE SDK AND ALL INTELLECTUAL PROPERTY MADE AVAILABLE OR LICENSED BY INRIX UNDER OR 
+IN CONNECTION WITH THIS AGREEMENT ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND.  INRIX DISCLAIMS ALL WARRANTIES DUTIES AND CONDITIONS, EITHER EXPRESS, IMPLIED OR STATUTORY WITH RESPECT TO SDK AND RELATED INTELLECTUAL PROPERTY, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. 
+7. LIMITATION OF LIABILITY.  NEITHER INRIX NOR ITS SUPPLIERS WILL BE LIABLE TO LICENSEE OR ANY THIRD PARTY FOR ANY INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, COVER OR CONSEQUENTIAL DAMAGES ARISING FROM OR OTHERWISE RELATED TO THIS AGREEMENT, EVEN IF INRIX OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY 
+OF THESE DAMAGES AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.  INRIX'S TOTAL LIABILITY TO LICENSEE FOR ACTUAL DAMAGES FOR ANY CAUSE WHATSOEVER WILL BE LIMITED TO ONE THOUSAND DOLLARS. 
+8. 	MISCELLANEOUS 
+    8.1 Nonsolicitation.  During the term of this Agreement and for a period of one year thereafter, each party will not, directly or indirectly, solicit the employment or services of the other party's employees or independent contractors without the prior written consent of the other party. 
+    8.2 No Partnership, Joint Venture or Franchise.  This Agreement will not be construed as creating a partnership, joint venture, or agency relationship or as granting a franchise.  
+    8.3 Export.  The Documentation and Applications may be subject to U.S. export jurisdiction and other applicable national or international laws.  Licensee will comply with all applicable international and national laws that apply to the Documentation and Applications, including the U.S. Export Administration Regulations. 
+    8.4 Notices.  All notices in connection with this Agreement will be deemed given as of the day they are received either by messenger, delivery service, or in the United States of America mail, postage prepaid, certified or registered, return receipt requested, and addressed either to Licensee or to INRIX at the addresses specified in this Agreement, or to such other address as a party may designate pursuant to this notice provision.  
+    8.5 Governing Law.  This Agreement will be interpreted, construed, and enforced in all respects in accordance with the local laws of the State of Washington U.S.A, without reference to its choice of law rules and not including the provisions of the 1980 U.N. Convention on Contracts for the International Sale of Goods. 
+    8.6 Assignability.  Neither party may assign its right, duties, and obligations under this Agreement without the other party's prior written consent, which consent will not be unreasonably withheld or delayed, except that a party may assign this Agreement without the other party's consent to a successor (including a successor by way of merger, acquisition, sale of assets, or operation of law) if the successor agrees in writing to assume and fulfill all of the assigning party's obligations under this Agreement and, if Licensee is the assignor, the successor does not indirectly or directly compete with INRIX.  Any assignment in violation of this Section 8.5 is null and void. 
+    8.7 Construction.  If any part of this Agreement is found to be illegal, unenforceable, or invalid, the remaining portions of this Agreement will remain in full force and effect.  If any limitation or restriction on the grant of any license to Licensee under this Agreement is found to be illegal, unenforceable, or invalid, the license will immediately terminate.  Failure by a party to enforce any provision of this Agreement will not be deemed a waiver of future enforcement of that or any other provision.  
+    8.8 Entire Agreement.  This Agreement is the final and complete expression of the agreement between these parties regarding the subject matter of this Agreement.  This Agreement supersedes, and the terms of this Agreement govern, all previous oral and written communications regarding these matters, all of which are merged into this Agreement, except that this Agreement does not supersede any prior nondisclosure or comparable agreement between the parties executed prior to this Agreement being executed. It will not be modified except by a written agreement dated subsequent to the date of this Agreement and signed on behalf of Licensee and INRIX by their respective duly authorized representatives. 
+ 
 
 Generated by CocoaPods - https://cocoapods.org

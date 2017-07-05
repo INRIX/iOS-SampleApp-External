@@ -36,8 +36,8 @@ class XDIncidentsInRadius: SampleAction {
         core.incidentsController.requestXDIncidentsInRadius(with: options, incidentsFilter: filter) {
             (incidents: [Any]?, response: IXCLCoreResponse?) in
 
-            if let error = response?.error as? NSError {
-                completionHandler(nil, error, false)
+            if let error = response?.error {
+                completionHandler(nil, (error as NSError), false)
             } else if let incidents = incidents {
                 let mappedIncidents = incidents.flatMap({ $0 as? IXCLXDIncident })
 

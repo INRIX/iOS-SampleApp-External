@@ -1,0 +1,1 @@
+../../../../INRIX-iOS-ClientLibrary/IXClientLibrary.framework/Headers/IXCLCacheController.h

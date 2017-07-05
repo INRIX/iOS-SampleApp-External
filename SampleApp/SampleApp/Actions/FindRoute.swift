@@ -38,8 +38,8 @@ class FindRoute: SampleAction {
         options?.maxAlternates = 1
 
         core.routesController.requestRoutes(with: options) { (routesResponse: IXCLRoutesResponse?) in
-            if let error = routesResponse?.error as? NSError {
-                completionHandler(nil, error, false)
+            if let error = routesResponse?.error {
+                completionHandler(nil, (error as NSError), false)
             } else if let routesCollection = routesResponse?.routesCollection,
             let routes = routesCollection.routes, routes.count > 0 {
                 let mappedRoutes = routes.flatMap({ $0 as? IXCLRoute })

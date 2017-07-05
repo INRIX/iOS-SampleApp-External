@@ -78,8 +78,8 @@ struct Quadkey : Hashable, ParamValue {
 
     fileprivate func latLongToPixelXY(_ lat:Double, lon:Double, levelOfDetail:Int) -> (x:Int, y:Int) {
         let x = (lon + 180) / 360
-        let sinLatitude = sin(lat * M_PI / 180)
-        let y = 0.5 - log((1 + sinLatitude) / (1 - sinLatitude)) / (4 * M_PI)
+        let sinLatitude = sin(lat * Double.pi / 180)
+        let y = 0.5 - log((1 + sinLatitude) / (1 - sinLatitude)) / (4 * Double.pi)
 
         let mapSize = MapSize(levelOfDetail)
         let pixelX = Clip(x * mapSize + 0.5, minValue: 0, maxValue: mapSize - 1)
@@ -151,8 +151,8 @@ struct Quadkey : Hashable, ParamValue {
 
     fileprivate func tileToLocation(_ tile:(x:Double, y:Double), zoomLevel:Double) -> CLLocationCoordinate2D {
         let longitude = ((tile.x * 360.0) / pow(2.0, zoomLevel)) - 180.0
-        let expY = exp((0.5 - (tile.y / pow(2.0, zoomLevel))) * 4.0 * M_PI)
-        let latitude = asin(  (expY - 1.0) / (expY + 1.0)) * 180.0 / M_PI
+        let expY = exp((0.5 - (tile.y / pow(2.0, zoomLevel))) * 4.0 * Double.pi)
+        let latitude = asin(  (expY - 1.0) / (expY + 1.0)) * 180.0 / Double.pi
 
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }

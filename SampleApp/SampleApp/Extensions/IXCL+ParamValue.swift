@@ -35,6 +35,8 @@ extension IXCLIncidentsFilter : ParamValueWithPushablePicker {
             return "Hazard"
         case IXCLIncidentsFilter.includeRoadClosure:
             return "Road Closure"
+        case IXCLIncidentsFilter.includeLaneClosure:
+            return "Lane Closure"
         case IXCLIncidentsFilter():
             return "None"
         default:
@@ -50,7 +52,8 @@ extension IXCLIncidentsFilter : ParamValueWithPushablePicker {
                                               .includeEvent,
                                               .includePolice,
                                               .includeHazard,
-                                              .includeRoadClosure]
+                                              .includeRoadClosure,
+                                              .includeLaneClosure]
 
         let optionPickerOptions = options.map({ OptionPickerOption(name: $0.toString(), option: $0, value: self.contains($0)) })
 

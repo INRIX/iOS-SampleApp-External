@@ -92,8 +92,13 @@ class TestListViewController: UITableViewController {
                             }
                         }
 
-                        cell.textLabel?.text = currentTest.state == .running ? "Testing" : "Finished"
-                        let font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: UIFontWeightRegular)
+                        cell.textLabel?.text = currentTest.state == .running ? "Testing" : "Finished"                        
+                        var font = UIFont.systemFont(ofSize: UIFont.labelFontSize)
+                        
+                        if #available(iOS 9.0, *) {
+                            font = UIFont.monospacedDigitSystemFont(ofSize: UIFont.labelFontSize, weight: UIFontWeightRegular)
+                        }
+                        
                         cell.detailTextLabel?.text = "\(successes) ✅    \(failures) ⛔️"
                         cell.detailTextLabel?.font = font
                         cell.detailTextLabel?.textColor = UIColor.black
