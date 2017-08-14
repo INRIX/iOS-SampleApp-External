@@ -29,6 +29,7 @@
  Gas Stations: \<IXCLGasStationsControllerProtocol\> \n
  Traffic Tiles: \<IXCLTrafficTilesControllerProtocol\> \n
  Traffic Cameras: \<IXCLCamerasControllerProtocol\> \n
+ Dangerous Slowdowns: \<IXCLDangerousSlowdownsControllerProtocol\> \n
  Drive-Time Alerts: \<IXCLDriveTimeAlertsControllerProtocol\> \n
  Incidents: \<IXCLIncidentsControllerProtocol\> \n
  Itineraries: \<IXCLItineraryControllerProtocol\> \n
@@ -40,6 +41,7 @@
  Route Updates: \<IXCLRouteUpdateControllerProtocol\> \n
  Saved Trips: \<IXCLTripControllerProtocol\> \n
  Search: \<IXCLSearchControllerProtocol\> \n
+ Speed Limits: \<IXCLSpeedLimitControllerProtocol\> \n
  Traffic Quality: \<IXCLTrafficQualityControllerProtocol\> \n
  Traffic Tiles: \<IXCLTrafficTilesControllerProtocol\> \n
  Vehicle State Reporting: \<IXCLVehicleStateControllerProtocol\> \n
@@ -49,6 +51,7 @@
 @page Services
  The INRIX Client Library encapsulates the following INRIX Services:
 
+ @subpage DangerousSlowdowns\n
  @subpage DriveTimeAlerts\n
  @subpage GasStations\n
  @subpage Incidents\n
@@ -59,6 +62,7 @@
  @subpage Routes\n
  @subpage SavedTrips\n
  @subpage Search\n
+ @subpage SpeedLimits\n
  @subpage TrafficCameras\n
  @subpage TrafficQuality\n
  @subpage TrafficTiles\n
@@ -73,6 +77,10 @@
  @ref IXCLPushToken\n
  @ref IXCLUserAccount\n
  @ref IXCLUserToken\n
+
+ @section DangerousSlowdowns Dangerous Slowdowns
+ @ref IXCLDangerousSlowdown\n
+ @ref IXCLDangerousSlowdownDescription\n
 
  @section GasStations Gas Stations
  @ref IXCLFuelProduct\n
@@ -173,8 +181,25 @@
  ****/
 
 /*!
+ @page DangerousSlowdowns Dangerous Slowdowns
+ This service finds significant speed drops in an area.
+ 
+ @section a Controllers
+ 
+ @ref IXCLDangerousSlowdownsController ""\n
+ 
+ @section b Model Objects
+ @ref IXCLDangerousSlowdown\n
+ 
+ @section c Options Classes
+ @ref IXCLDangerousSlowdownsInBoxOptions\n
+ @ref IXCLDangerousSlowdownsInRadiusOptions\n
+ 
+ */
+
+/*!
  @page DriveTimeAlerts Drive-Time Alerts
- This service provide user the ability to save and restore custom places.
+ This service provides user the ability to be alerted of incidents while driving.
 
  @section a Controllers
 
@@ -352,6 +377,19 @@
 
  @section c Options Classes
  @ref IXCLSearchOptions\n
+ */
+
+/*!
+ @page SpeedLimits Speed Limits
+ This service finds significant speed drops in an area.
+ 
+ @section a Controllers
+ 
+ @ref IXCLSpeedLimitController ""\n
+ 
+ @section c Options Classes
+ @ref IXCLSpeedLimitOptions\n
+ 
  */
 
 /*!

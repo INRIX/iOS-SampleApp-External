@@ -17,6 +17,11 @@
 @class IXCLSegment;
 @class IXCLSpeedLimitOptions;
 
+/*!
+ * @protocol IXCLSpeedLimitControllerProtocol
+ * @abstract
+ *      Protocol definition for the speed limits controller.
+ */
 @protocol IXCLSpeedLimitControllerProtocol <NSObject>
 
 /*!
@@ -33,6 +38,10 @@
 
 @end
 
+/*!
+ * @class IXCLSpeedLimitController
+ * @abstract The speed limit controller.
+ */
 @interface IXCLSpeedLimitController : IXCLBaseController<IXCLSpeedLimitControllerProtocol>
 
 @end

@@ -16,6 +16,11 @@
 @class IXCLDangerousSlowdownsInBoxOptions;
 @class IXCLDangerousSlowdownsInRadiusOptions;
 
+/*!
+ * @protocol IXCLDangerousSlowdownsControllerProtocol
+ * @abstract
+ *      Protocol definition for the dangerous slowdowns controller.
+ */
 @protocol IXCLDangerousSlowdownsControllerProtocol <NSObject>
 
 /*!
@@ -42,6 +47,10 @@
 
 @end
 
+/*!
+ * @class IXCLDangerousSlowdownsController
+ * @abstract The dangerous slowdowns controller.
+ */
 @interface IXCLDangerousSlowdownsController : IXCLBaseController<IXCLDangerousSlowdownsControllerProtocol>
 
 @end

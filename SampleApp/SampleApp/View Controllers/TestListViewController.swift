@@ -270,13 +270,15 @@ class SampleActionsTestRun {
     }
 
     fileprivate func update(_ samples: [SampleAction.Type]) {
-        let stillRunning = self.results.values.contains(.running)
-        if self.state == .running && stillRunning == false {
-            self.state = .finished
-            self.instances = []
-            self.core = nil
-        }
+        DispatchQueue.main.async {
+            let stillRunning = self.results.values.contains(.running)
+            if self.state == .running && stillRunning == false {
+                self.state = .finished
+                self.instances = []
+                self.core = nil
+            }
 
-        self.updateHandler(samples)
+            self.updateHandler(samples)
+        }
     }
 }

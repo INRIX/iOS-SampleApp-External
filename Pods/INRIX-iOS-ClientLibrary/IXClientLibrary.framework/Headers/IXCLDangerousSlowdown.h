@@ -135,7 +135,7 @@ typedef NS_ENUM (NSUInteger, IXCLDangerousSlowdownDirection)
 @end
 
 /*!
- * @class IXCLDangerousSlowdown
+ * @class IXCLDangerousSlowdownDescription
  * @abstract Model object describing the description information for an slowdown.
  */
 @interface IXCLDangerousSlowdownDescription : NSObject<NSCopying, NSCoding>

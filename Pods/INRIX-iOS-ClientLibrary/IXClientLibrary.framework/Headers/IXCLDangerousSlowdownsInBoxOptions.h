@@ -14,6 +14,10 @@
 
 #import "IXCLDangerousSlowdownBaseOptions.h"
 
+/*!
+ * @class IXCLDangerousSlowdownsInBoxOptions
+ * @abstract Options object to get the dangerous slowdowns between two coordinates.
+ */
 @interface IXCLDangerousSlowdownsInBoxOptions : IXCLDangerousSlowdownBaseOptions
 
 //-----------------------------------------------------------------------------

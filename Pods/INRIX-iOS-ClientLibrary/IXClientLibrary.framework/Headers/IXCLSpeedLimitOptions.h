@@ -42,6 +42,10 @@ typedef NS_OPTIONS (NSUInteger, IXCLSpeedLimitOutputFieldsMask)
                                                   IXCLSpeedLimitOutputFieldsMaskRoadName),
 };
 
+/*!
+ * @class IXCLSpeedLimitOptions
+ * @abstract Options object to get the posted speed limit at a point.
+ */
 @interface IXCLSpeedLimitOptions : IXCLBaseOptions
 
 /*!

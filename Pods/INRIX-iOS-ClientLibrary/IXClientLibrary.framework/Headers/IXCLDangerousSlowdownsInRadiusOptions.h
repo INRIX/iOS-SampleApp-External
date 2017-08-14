@@ -14,6 +14,10 @@
 
 #import "IXCLDangerousSlowdownBaseOptions.h"
 
+/*!
+ * @class IXCLDangerousSlowdownsInRadiusOptions
+ * @abstract Options object to get the dangerous slowdowns around a coordinate.
+ */
 @interface IXCLDangerousSlowdownsInRadiusOptions : IXCLDangerousSlowdownBaseOptions
 
 /*!
