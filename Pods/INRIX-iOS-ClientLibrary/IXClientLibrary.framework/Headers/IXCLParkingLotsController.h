@@ -29,7 +29,7 @@
  * @abstract
  *      Protocol definition for the Parking Lots Controller
  */
-@protocol IXCLParkingLotsControllerProtocol <NSObject>
+@protocol IXCLParkingLotsControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Instance Methods

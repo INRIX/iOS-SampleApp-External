@@ -25,7 +25,7 @@
  * @abstract
  *      Protocol definition for the Geocode Controller
  */
-@protocol IXCLGeocodeControllerProtocol <NSObject>
+@protocol IXCLGeocodeControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Methods

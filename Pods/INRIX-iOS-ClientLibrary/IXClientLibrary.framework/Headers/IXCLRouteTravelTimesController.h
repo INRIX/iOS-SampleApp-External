@@ -29,7 +29,7 @@
  * @abstract
  *      Protocol definition for the Route Travel Times Controller
  */
-@protocol IXCLRouteTravelTimesControllerProtocol <NSObject>
+@protocol IXCLRouteTravelTimesControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

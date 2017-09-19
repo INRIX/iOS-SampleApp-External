@@ -49,7 +49,7 @@ FOUNDATION_EXPORT CLLocationDistance const IXCLRouteTrackingOnRouteThresholdInMe
  * @abstract
  *      Protocol definition for the Route Tracking Controller
  */
-@protocol IXCLRouteTrackingControllerProtocol <NSObject>
+@protocol IXCLRouteTrackingControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

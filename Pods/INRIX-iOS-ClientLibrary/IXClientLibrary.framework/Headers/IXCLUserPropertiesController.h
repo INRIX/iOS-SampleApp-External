@@ -26,7 +26,7 @@
  * @abstract
  *      Protocol definition for the User Properties Controller
  */
-@protocol IXCLUserPropertiesControllerProtocol <NSObject>
+@protocol IXCLUserPropertiesControllerProtocol<NSObject>
 
 /*!
  * @abstract

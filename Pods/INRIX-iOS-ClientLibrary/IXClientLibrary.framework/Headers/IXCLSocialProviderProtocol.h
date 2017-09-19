@@ -20,7 +20,7 @@
 /*!
  * @abstract Defines a third party OAuth provider.
  */
-@protocol IXCLSocialProviderProtocol <NSObject>
+@protocol IXCLSocialProviderProtocol<NSObject>
 
 /*!
  * @abstract The name of the Social Provider.
@@ -34,6 +34,8 @@
 
 /*!
  * @abstract Gets the OAuthInfo about the current user from the Social Provider.
+ * @param completion
+ *          The completion handler for the IXCLOAuthInfo.
  */
 - (void) getOAuthInfo: (void (^)(IXCLOAuthInfo * oAuthInfo, NSError * error)) completion;
 

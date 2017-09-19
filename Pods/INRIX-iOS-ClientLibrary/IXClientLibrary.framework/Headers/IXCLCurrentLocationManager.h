@@ -58,7 +58,7 @@ typedef NS_ENUM (NSUInteger, IXCLCurrentLocationManagerTripStatus)
  *  @abstract
  *      Protocol declaration for the Current Location Manager
  */
-@protocol IXCLCurrentLocationManagerProtocol <NSObject>
+@protocol IXCLCurrentLocationManagerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties
@@ -133,6 +133,8 @@ typedef NS_ENUM (NSUInteger, IXCLCurrentLocationManagerTripStatus)
 /*!
  * @abstract
  *      Returns the last known location, e.g. from the last run of the app.
+ * @returns
+ *      CLLocation representing the last known location for the device.
  */
 - (CLLocation *) lastKnownLocation;
 
@@ -140,6 +142,8 @@ typedef NS_ENUM (NSUInteger, IXCLCurrentLocationManagerTripStatus)
  * @abstract
  *      Returns the current location if available; otherwise returns the
  *      last known location.
+ * @returns
+ *      CLLocation representing the current or last known location for the device.
  */
 - (CLLocation *) currentOrLastKnownLocation;
 
@@ -147,6 +151,8 @@ typedef NS_ENUM (NSUInteger, IXCLCurrentLocationManagerTripStatus)
  * @abstract
  *      Returns the current instance of the location manager, for use outside
  *      the INRIX core.
+ * @returns
+ *      The default current location manager.
  */
 + (id <IXCLCurrentLocationManagerProtocol> ) defaultManager;
 
@@ -154,6 +160,8 @@ typedef NS_ENUM (NSUInteger, IXCLCurrentLocationManagerTripStatus)
  * @abstract
  *      Returns the current instance of the location manager, for use outside
  *      the INRIX core.
+ * @returns
+ *      The current or last known device coordinate.
  */
 + (CLLocationCoordinate2D) currentOrLastKnownCoordinate;
 

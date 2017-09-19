@@ -107,7 +107,7 @@ FOUNDATION_EXPORT NSString * const IXCLRouteUpdateFasterRouteKey;
  * @abstract
  *      Protocol definition for the Route Update Controller
  */
-@protocol IXCLRouteUpdateControllerProtocol <NSObject>
+@protocol IXCLRouteUpdateControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

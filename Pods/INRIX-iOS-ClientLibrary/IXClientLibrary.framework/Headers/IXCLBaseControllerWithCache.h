@@ -22,7 +22,7 @@
  * @abstract 
  *      Controllers that support caching expose this protocol.
  */
-@protocol IXCLBaseControllerWithCacheProtocol <NSObject>
+@protocol IXCLBaseControllerWithCacheProtocol<NSObject>
 /*!
  * @abstract Removes all entries from the cache.
  */

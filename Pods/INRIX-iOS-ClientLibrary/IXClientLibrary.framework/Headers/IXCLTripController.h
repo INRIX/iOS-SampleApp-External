@@ -38,7 +38,7 @@ extern const int IXCLSavedTripMaxPaypoints;
  * @abstract
  *      Protocol definition for the Trips Controller
  */
-@protocol IXCLTripControllerProtocol <NSObject>
+@protocol IXCLTripControllerProtocol<NSObject>
 
 /*!
  * @abstract Saves a trip to the server.

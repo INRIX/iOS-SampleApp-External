@@ -107,7 +107,7 @@ FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertParkingOnRouteParkingArrayK
  * @abstract
  *      Protocol definition for the Drive-Time Alerts Controller
  */
-@protocol IXCLDriveTimeAlertsControllerProtocol <NSObject>
+@protocol IXCLDriveTimeAlertsControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

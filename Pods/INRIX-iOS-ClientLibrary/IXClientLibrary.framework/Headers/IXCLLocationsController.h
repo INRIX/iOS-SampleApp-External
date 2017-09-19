@@ -45,7 +45,7 @@ FOUNDATION_EXPORT NSString * const IXCLLocationsControllerLocationsDidUpdateNoti
  * @abstract
  *      Protocol definition for the Locations Controller
  */
-@protocol IXCLLocationsControllerProtocol <IXCLBaseControllerWithCacheProtocol>
+@protocol IXCLLocationsControllerProtocol<IXCLBaseControllerWithCacheProtocol>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Recommendation Properties

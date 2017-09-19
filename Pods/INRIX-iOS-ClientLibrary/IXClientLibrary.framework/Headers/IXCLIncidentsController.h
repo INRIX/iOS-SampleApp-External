@@ -73,7 +73,7 @@ typedef NS_OPTIONS (NSInteger, IXCLIncidentsFilter)
  * @abstract
  *      Protocol definition for the Incidents Controller
  */
-@protocol IXCLIncidentsControllerProtocol <NSObject>
+@protocol IXCLIncidentsControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Recommendation Properties
@@ -273,6 +273,8 @@ typedef NS_OPTIONS (NSInteger, IXCLIncidentsFilter)
  * @abstract
  *      Replaces values in properties specified to use default values with the
  *      default values stored in the controller.
+ * @param options
+ *      Options to replace the defaults with.
  */
 - (void) replaceDefaultsInRequestOptions: (IXCLIncidentBaseOptions *) options;
 

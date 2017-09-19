@@ -97,6 +97,9 @@ typedef NS_ENUM (NSUInteger, IXCLTimerState)
  *      Allocates an IXCLTimer using a register factory block, if present.
  *      If no factory block is regisered, this is equivalent to alloc.
  *      Using this provides an easy way of mocking IXCLTimer.
+ *
+ * @return
+ *      An instance of the IXCLTimer class.
  */
 + (id) allocUsingFactory;
 

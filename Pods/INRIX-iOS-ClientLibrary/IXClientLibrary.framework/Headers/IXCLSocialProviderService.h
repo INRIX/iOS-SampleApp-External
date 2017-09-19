@@ -22,7 +22,7 @@
 /*!
  * @abstract Defines a service that manages Social Providers.
  */
-@protocol IXCLSocialProviderServiceProtocol <NSObject>
+@protocol IXCLSocialProviderServiceProtocol<NSObject>
 
 /*!
  * @abstract The active Social Provider.

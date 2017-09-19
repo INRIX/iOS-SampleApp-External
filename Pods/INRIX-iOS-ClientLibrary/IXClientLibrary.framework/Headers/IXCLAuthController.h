@@ -37,7 +37,7 @@ FOUNDATION_EXPORT NSString * const IXCLAuthControllerUserAccountUserInfoKey;
  * @abstract
  *      Protocol declaration for the Auth Controller
  */
-@protocol IXCLAuthControllerProtocol <NSObject>
+@protocol IXCLAuthControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

@@ -29,7 +29,7 @@
  * @abstract
  *      Protocol definition for the Traffic Tiles Controller
  */
-@protocol IXCLTrafficTilesControllerProtocol <NSObject>
+@protocol IXCLTrafficTilesControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - App Recommendation Properties
@@ -127,6 +127,8 @@ FOUNDATION_EXPORT CGFloat const IXCLTrafficTilesTileSize;
  * @abstract
  *      Replaces values in properties specified to use default values with the
  *      default values stored in the controller.
+ * @param options
+ *      The options to replace the defaults with.
  */
 - (void) replaceDefaultsInRequestOptions: (IXCLTrafficTileOptions *) options;
 

@@ -27,7 +27,7 @@
  * @abstract
  *      Protocol definition for the Itinerary Controller
  */
-@protocol IXCLItineraryControllerProtocol <NSObject>
+@protocol IXCLItineraryControllerProtocol<NSObject>
 
 /*!
  * @abstract Retrieves itineraries for the current user.

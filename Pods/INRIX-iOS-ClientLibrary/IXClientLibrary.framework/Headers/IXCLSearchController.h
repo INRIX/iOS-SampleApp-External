@@ -46,7 +46,7 @@ typedef void (^ IXCLAccessPointResultsBlock)(CLLocationCoordinate2D result, NSEr
  * @protocol IXCLSearchControllerProtocol
  * @abstract Protocol definition for the Search Controller.
  */
-@protocol IXCLSearchControllerProtocol <NSObject>
+@protocol IXCLSearchControllerProtocol<NSObject>
 
 /*!
  * @abstract

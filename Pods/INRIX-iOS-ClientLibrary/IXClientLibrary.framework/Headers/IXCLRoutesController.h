@@ -43,7 +43,7 @@ FOUNDATION_EXPORT NSUInteger const IXCLRoutesControllerDefaultCacheLimit;
  * @abstract
  *      Protocol definition for the Routes Controller
  */
-@protocol IXCLRoutesControllerProtocol <IXCLBaseControllerWithCacheProtocol>
+@protocol IXCLRoutesControllerProtocol<IXCLBaseControllerWithCacheProtocol>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Recommendation Properties
@@ -119,6 +119,8 @@ FOUNDATION_EXPORT NSUInteger const IXCLRoutesControllerDefaultCacheLimit;
  * @abstract
  *      Replaces values in properties specified to use default values with the
  *      default values stored in the controller.
+ * @param options
+ *      Options to replace the defaults with.
  */
 - (void) replaceDefaultsInRequestOptions: (IXCLRoutesBaseOptions *) options;
 

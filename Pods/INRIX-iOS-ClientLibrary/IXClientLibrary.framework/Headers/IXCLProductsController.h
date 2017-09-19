@@ -65,7 +65,7 @@ typedef NS_OPTIONS (NSUInteger, IXCLProductType)
  * @abstract
  *      Protocol definition for the Products Controller
  */
-@protocol IXCLProductsControllerProtocol <NSObject>
+@protocol IXCLProductsControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Methods

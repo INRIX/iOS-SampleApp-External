@@ -29,7 +29,7 @@
  * @abstract
  *      Protocol definition for the Traffic Quality Controller
  */
-@protocol IXCLTrafficQualityControllerProtocol <NSObject>
+@protocol IXCLTrafficQualityControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

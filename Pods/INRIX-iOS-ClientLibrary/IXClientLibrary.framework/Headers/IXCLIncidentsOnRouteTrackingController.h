@@ -56,7 +56,7 @@ FOUNDATION_EXPORT CLLocationDistance const IXCLIncidentsOnRouteTrackingDefaultTh
  * @abstract
  *      Protocol definition for the Incidents-On-Route Tracking Controller
  */
-@protocol IXCLIncidentsOnRouteTrackingControllerProtocol <NSObject>
+@protocol IXCLIncidentsOnRouteTrackingControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

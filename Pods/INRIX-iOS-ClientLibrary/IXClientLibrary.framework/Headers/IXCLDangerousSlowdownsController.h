@@ -21,7 +21,7 @@
  * @abstract
  *      Protocol definition for the dangerous slowdowns controller.
  */
-@protocol IXCLDangerousSlowdownsControllerProtocol <NSObject>
+@protocol IXCLDangerousSlowdownsControllerProtocol<NSObject>
 
 /*!
  * @abstract Returns the array of IXCLDangerousSlowdown objects in the completion block.

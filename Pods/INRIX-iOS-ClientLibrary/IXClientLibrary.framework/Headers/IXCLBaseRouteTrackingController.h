@@ -27,7 +27,7 @@
  * @abstract
  *      Protocol definition for the Base Route Tracking Controller
  */
-@protocol IXCLBaseRouteTrackingControllerProtocol <NSObject>
+@protocol IXCLBaseRouteTrackingControllerProtocol<NSObject>
 @end
 
 //-----------------------------------------------------------------------------

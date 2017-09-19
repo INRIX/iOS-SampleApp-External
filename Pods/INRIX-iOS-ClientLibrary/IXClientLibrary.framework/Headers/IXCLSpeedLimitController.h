@@ -22,7 +22,7 @@
  * @abstract
  *      Protocol definition for the speed limits controller.
  */
-@protocol IXCLSpeedLimitControllerProtocol <NSObject>
+@protocol IXCLSpeedLimitControllerProtocol<NSObject>
 
 /*!
  * @abstract Returns the IXCLSpeedLimit objects in the completion block.

@@ -31,7 +31,7 @@
  * @abstract
  *      Protocol definition for the Cameras Controller
  */
-@protocol IXCLCamerasControllerProtocol <NSObject>
+@protocol IXCLCamerasControllerProtocol<NSObject>
 
 /*!
  * @abstract

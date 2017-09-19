@@ -30,7 +30,7 @@ FOUNDATION_EXPORT NSUInteger const IXCLCacheControllerDefaultLimit;
  * @abstract
  *      Protocol definition for Cache-Enabled Controllers
  */
-@protocol IXCLCacheControllerProtocol <NSObject>
+@protocol IXCLCacheControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

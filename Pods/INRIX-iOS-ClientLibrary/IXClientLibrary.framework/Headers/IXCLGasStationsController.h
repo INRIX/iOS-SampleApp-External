@@ -28,7 +28,7 @@
  * @abstract
  *      Protocol definition for the Gas Stations Controller
  */
-@protocol IXCLGasStationsControllerProtocol <NSObject>
+@protocol IXCLGasStationsControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Methods

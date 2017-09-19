@@ -33,7 +33,7 @@ typedef NS_ENUM (NSUInteger, IXCLParkingObjectAvailabilityStatus)
  * @abstract Protocol definition for the Parking objects.
  */
 
-@protocol IXCLParkingObjectProtocol <NSObject>
+@protocol IXCLParkingObjectProtocol<NSObject>
 
 /// Center coordinate of the parking object.
 @property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;

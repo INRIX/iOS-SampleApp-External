@@ -19,7 +19,7 @@
 //-----------------------------------------------------------------------------
 #pragma mark - IXCLSocialProviderServiceConfigProtocol
 
-@protocol IXCLSocialProviderServiceConfigProtocol <NSObject>
+@protocol IXCLSocialProviderServiceConfigProtocol<NSObject>
 
 /*!
  * @abstract The collection of Social Providers.

@@ -37,7 +37,7 @@ FOUNDATION_EXPORT NSString * const IXCLNetworkReachabilityControllerReachability
  * @abstract
  *      Protocol definition for the Network Reachability Controller
  */
-@protocol IXCLNetworkReachabilityControllerProtocol <NSObject>
+@protocol IXCLNetworkReachabilityControllerProtocol<NSObject>
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties

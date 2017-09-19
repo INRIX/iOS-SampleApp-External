@@ -394,6 +394,9 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
  *      This method allows the caller to invoke a CS service directly through
  *      a GET request. This method will automatically include the current access
  *      token. Results are returned through a completion block.
+ *      This method defaults to the North American region. This method is also
+ *      available in a form accepting a `regionParameter` for use outside North
+ *      America.
  * @param actionName
  *      CS Action to query.
  * @param queryParameters
@@ -408,6 +411,28 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
 
 /*!
  * @abstract
+ *      Asynchronously invoke a CS service directly.
+ * @discussion
+ *      This method allows the caller to invoke a CS service directly through
+ *      a GET request. This method will automatically include the current access
+ *      token. Results are returned through a completion block.
+ * @param actionName
+ *      CS Action to query.
+ * @param queryParameters
+ *      Dictionary of NSString query parameters for the named action. This
+ *      dictionary should not contain the current access token or the action name.
+ * @param regionParameter
+ *      A `CLLocationCoordinate2D` used to determine the region for the call.
+ @param completion
+ *      Completion block that will be called with the server's response.
+ */
+- (void) invokeService: (NSString *)actionName
+       queryParameters: (NSDictionary *)queryParameters
+       regionParameter: (CLLocationCoordinate2D) regionParameter
+            completion: (void (^)(NSString *, IXCLCoreResponse *))completion;
+
+/*!
+ * @abstract
  *      Presents a permission dialog for specified service. Will do nothing if
  *      the permission setting has already been set.
  *
@@ -415,6 +440,7 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
  *      Service to get permission for.
  */
 - (void) requestPermissionForService: (IXCLCoreServiceType) serviceType;
+
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Methods
