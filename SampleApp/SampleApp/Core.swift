@@ -63,7 +63,7 @@ class ApplicationCore {
             let autoreleasingAllClasses = AutoreleasingUnsafeMutablePointer<AnyClass?>(allClasses)
             let actualClassCount: Int32 = objc_getClassList(autoreleasingAllClasses, numClasses)
 
-            for i in 0 ..< actualClassCount {
+            for i in 0 ..< min(numClasses, actualClassCount) {
                 if let currentClass: AnyClass = allClasses[Int(i)] {
                     if let protocolClass = currentClass as? SampleAction.Type {
                         classes.append(protocolClass)

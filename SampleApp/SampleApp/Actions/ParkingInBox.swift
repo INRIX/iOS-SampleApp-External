@@ -33,7 +33,6 @@ class ParkingInBox: SampleAction {
         let options = IXCLParkingLotsInBoxOptions(corner1: region.nw, corner2: region.se)
 
         options?.outputField = IXCLParkingLotOptionsOutputField.all
-        options?.unitsType = .meters
         options?.parkingType = parkingType
 
         core.parkingLotsController.requestParkingLotsInBox(with: options) { (parking: [Any]?, response: IXCLCoreResponse?) in

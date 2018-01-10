@@ -122,6 +122,19 @@
 
 /*!
  * @abstract
+ *      Constructs a NSString from an NSDate using the following format:
+ *      "YYYY'-'mm'-'dd'T'HH':'MM'".
+ *
+ * @param date
+ *      An NSDate object.
+ *
+ * @return
+ *      NSString constructed from the NSDate.
+ */
++ (NSString *) ixcl_dateToParkingString: (NSDate *) date;
+
+/*!
+ * @abstract
  *      Constructs an NSString from an NSDate using short format style for date
  *      and time.
  *

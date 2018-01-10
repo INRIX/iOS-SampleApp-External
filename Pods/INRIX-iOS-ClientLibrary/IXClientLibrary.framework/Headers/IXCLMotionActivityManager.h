@@ -29,6 +29,9 @@
  */
 @interface IXCLMotionActivityManager : CMMotionActivityManager
 
+//-----------------------------------------------------------------------------
+#pragma mark - Properties
+
 /*!
  * @abstract
  *      A Boolean value indicating whether motion data is available on the
@@ -36,5 +39,16 @@
  *      +[CMMotionActivityManager isMotionActivityAvailable].
  */
 @property (nonatomic, assign, readonly) BOOL isMotionActivityAvailable;
+
+//-----------------------------------------------------------------------------
+#pragma mark - Class Methods
+
+/*!
+ * @abstract
+ *      Tests to see if motion activity is authorized.
+ * @return
+ *      A BOOL indicating if motion activity permissions are authorized.
+ */
++ (BOOL) isAuthorized;
 
 @end

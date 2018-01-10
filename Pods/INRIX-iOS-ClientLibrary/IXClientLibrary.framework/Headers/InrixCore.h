@@ -45,6 +45,23 @@
 #import "IXCLRoutesFromPointsOptions.h"
 
 //-----------------------------------------------------------------------------
+#pragma mark - Enums
+
+/*!
+ * @abstract iOS System services that require permission dialogs.
+ * @discussion Once a permission value is set it can only be changed by the user in
+ * the system's privacy settings. Be sure to ask for the correct permission the first time.
+ * Especially in the case of what kind of location permission to ask for.
+ */
+typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
+{
+    IXCLCoreServiceTypeLocationWhenInUse,
+    IXCLCoreServiceTypeLocationAlways,
+    IXCLCoreServiceTypeCalendar,
+    IXCLCoreServiceTypeMotion
+};
+
+//-----------------------------------------------------------------------------
 #pragma mark - Protocol Declaration
 
 /*!
@@ -391,6 +408,16 @@
 - (void) invokeService: (NSString *) actionName
        queryParameters: (NSDictionary *) queryParameters
             completion: (void (^)(NSString * result, IXCLCoreResponse * coreResponse)) completion;
+
+/*!
+ * @abstract
+ *      Presents a permission dialog for specified service. Will do nothing if
+ *      the permission setting has already been set.
+ *
+ * @param serviceType
+ *      Service to get permission for.
+ */
+- (void) requestPermissionForService: (IXCLCoreServiceType) serviceType;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Methods

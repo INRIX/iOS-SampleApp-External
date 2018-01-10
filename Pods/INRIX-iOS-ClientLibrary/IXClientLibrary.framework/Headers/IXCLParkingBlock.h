@@ -17,8 +17,16 @@
 #import "IXCLMapPoint.h"
 #import "IXCLParkingObjectProtocol.h"
 
-@class IXCLParkingBlockPayStation;
 @class IXCLParkingBlockSection;
+
+typedef NS_ENUM (NSUInteger, IXCLParkingSectionOccupancyBucket)
+{
+    IXCLParkingSectionOccupancyBucketUnknown = 0,
+    IXCLParkingSectionOccupancyBucket1       = 1, // > 75% occupied
+    IXCLParkingSectionOccupancyBucket2       = 2,
+    IXCLParkingSectionOccupancyBucket3       = 3, // < 51% occupied
+};
+
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
@@ -48,23 +56,28 @@
 @property (nonatomic, copy, readwrite) NSString * streetName;
 
 /*!
- * @abstract The street's name near the parking block head.
- */
-@property (nonatomic, copy, readwrite) NSString * fromStreetName;
-
-/*!
- * @abstract The street's name near the parking block tail.
- */
-@property (nonatomic, copy, readwrite) NSString * toStreetName;
-
-/*!
- * @abstract The list of pay stations in the parking block.
- */
-@property (nonatomic, strong, readonly) NSArray <IXCLParkingBlockPayStation *> * payStations;
-
-/*!
  * @abstract The list of sections in the parking block.
  */
 @property (nonatomic, strong, readonly) NSArray <IXCLParkingBlockSection *> * sections;
+
+/*!
+ * @abstract Indicates occupancy bucket of a parking section.
+ */
+@property (nonatomic, assign, readwrite) IXCLParkingSectionOccupancyBucket occupancyBucket;
+
+/*!
+ * @abstract An array of payment types accepted in the parking block.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * paymentTypes;
+
+/*!
+ * @abstract Currency symbol used in the parking block.
+ */
+@property (nonatomic, strong, readwrite) NSString * currency;
+
+/*!
+ * @abstract Unique id for the street.
+ */
+@property (nonatomic, strong, readwrite) NSString * streetID;
 
 @end

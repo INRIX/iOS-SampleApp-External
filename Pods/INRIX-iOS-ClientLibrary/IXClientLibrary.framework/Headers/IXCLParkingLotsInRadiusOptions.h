@@ -30,7 +30,7 @@
 /*!
  * The radius of the search area.
  */
-@property (nonatomic, assign, readwrite) double radius;
+@property (nonatomic, assign, readwrite) CLLocationDistance radius;
 
 /*!
  * Initializes the search options with a center and radius.

@@ -14,6 +14,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "IXCLMapPoint.h"
 
 typedef NS_ENUM (NSUInteger, IXCLParkingLotGateType)
 {
@@ -33,12 +34,7 @@ typedef NS_ENUM (NSUInteger, IXCLParkingLotGateType)
  * @class IXCLParkingLotGate
  * @abstract Model object describing an INRIX parking lot gate.
  */
-@interface IXCLParkingLotGate : NSObject <NSCopying>
-
-/*!
- * @abstract The coordinate of parking lot gate.
- */
-@property (nonatomic, assign, readwrite) CLLocationCoordinate2D coordinate;
+@interface IXCLParkingLotGate : IXCLMapPoint <NSCopying>
 
 /*!
  * @abstract The type of parking lot gate.

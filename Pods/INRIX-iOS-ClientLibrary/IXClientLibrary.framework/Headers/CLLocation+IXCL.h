@@ -28,6 +28,8 @@ FOUNDATION_EXPORT double const IXCLMetersPerMile;
  */
 FOUNDATION_EXPORT NSString * const IXCLCoordinateStringSeparator;
 
+CLLocationCoordinate2D CLLocationCoordinate2DFromGeoJsonArray(NSArray * array);
+
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Cateogry Declaration

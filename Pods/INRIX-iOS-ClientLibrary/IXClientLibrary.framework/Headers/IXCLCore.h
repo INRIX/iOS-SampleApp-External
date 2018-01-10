@@ -48,6 +48,7 @@
 @class IXCLUserPropertiesController;
 @class IXCLDangerousSlowdownsController;
 @class IXCLSpeedLimitController;
+typedef NS_ENUM (NSInteger, IXCLCoreServiceType);
 
 //-----------------------------------------------------------------------------
 #pragma mark - Global Exports
@@ -59,23 +60,6 @@ FOUNDATION_EXPORT NSString * const IXCLCoreVersion;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Protocol Declaration
-
-//-----------------------------------------------------------------------------
-#pragma mark - Enums
-
-/*!
- * @abstract iOS System services that require permission dialogs.
- * @discussion Once a permission value is set it can only be changed by the user in
- * the system's privacy settings. Be sure to ask for the correct permission the first time.
- * Especially in the case of what kind of location permission to ask for.
- */
-typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
-{
-    IXCLCoreServiceTypeLocationWhenInUse,
-    IXCLCoreServiceTypeLocationAlways,
-    IXCLCoreServiceTypeCalendar,
-    IXCLCoreServiceTypeMotion
-};
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration

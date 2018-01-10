@@ -15,17 +15,6 @@
 #import <Foundation/Foundation.h>
 
 //-----------------------------------------------------------------------------
-#pragma mark Enum Definitions
-
-typedef NS_ENUM (NSUInteger, IXCLParkingLotOpeningHoursType)
-{
-    IXCLParkingLotOpeningHoursTypeUnknown     = 0,
-    IXCLParkingLotOpeningHoursTypeEntryHours  = 1,
-    IXCLParkingLotOpeningHoursTypeExitHours   = 2,
-    IXCLParkingLotOpeningHoursTypeMaxStayTime = 3,
-};
-
-//-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
 
 /*!
@@ -35,16 +24,8 @@ typedef NS_ENUM (NSUInteger, IXCLParkingLotOpeningHoursType)
 @interface IXCLParkingLotOpeningHours : NSObject <NSCopying>
 
 /*!
- * @abstract The parking lot opening hours type of parking lot.
- */
-@property (nonatomic, assign, readwrite) IXCLParkingLotOpeningHoursType type;
-
-/*!
  * @abstract The parking lot opening hours description of parking lot.
  */
 @property (nonatomic, copy, readwrite) NSString * notes;
-
-/// @cond
-+ (IXCLParkingLotOpeningHoursType) openingHoursTypeFromString: (NSString *) string;
 
 @end

@@ -32,7 +32,6 @@ class ParkingInRadius: SampleAction {
 
         let options = IXCLParkingLotsInRadiusOptions(center: radius.coordinate, radius: radius.radius)
         options?.outputField = IXCLParkingLotOptionsOutputField.all
-        options?.unitsType = .meters
         options?.parkingType = parkingType
 
         core.parkingLotsController.requestParkingLotsInRadius(with: options) { (parking: [Any]?, response: IXCLCoreResponse?) in

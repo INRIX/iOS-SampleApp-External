@@ -19,6 +19,12 @@
 @class IXCLAddress;
 @class IXCLParkingLotCurrentCapacity;
 @class IXCLParkingLotOpeningHours;
+@class IXCLParkingLotReview;
+@class IXCLParkingAmenity;
+@class IXCLParkingLotPhoto;
+@class IXCLParkingLotReview;
+@class IXCLParkingStructuredRate;
+@class IXCLParkingCalculatedRate;
 
 //-----------------------------------------------------------------------------
 #pragma mark Enum Definitions
@@ -138,6 +144,110 @@ typedef NS_OPTIONS (NSUInteger, IXCLParkingPaymentMethodType)
  */
 @property (nonatomic, strong, readwrite) IXCLParkingLotCurrentCapacity * currentCapacity;
 
+/*!
+ * @abstract Array of reviews for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingLotReview *> * reviews;
+
+/*!
+ * @abstract Average review score for the parking lot.
+ */
+@property (nonatomic, assign, readwrite) int reviewScore;
+
+/*!
+ * @abstract Total number of reviews for the parking lot.
+ */
+@property (nonatomic, assign, readwrite) int reviewCount;
+
+/*!
+ * @abstract Array of reservation objects for the lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray * reservations;
+
+/*!
+ * @abstract The address of the lot for navigation purposes.
+ */
+@property (nonatomic, strong, readwrite) IXCLAddress * navigationAddress;
+
+/*!
+ * @abstract The street address for the lot.
+ */
+@property (nonatomic, strong, readwrite) IXCLAddress * buildingAddress;
+
+/*!
+ * @abstract A number corresponding to the relative cost of the lot.
+ */
+@property (nonatomic, assign, readwrite) int costIndex;
+
+/*!
+ * @abstract The currency symbol for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSString * currency;
+
+/*!
+ * @abstract The ISO currency for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSString * currencyISO;
+
+/*!
+ * @abstract Notes for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSString * note;
+
+/*!
+ * @abstract An array of strings describing the hours of operation for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * hours;
+
+/*!
+ * @abstract A string describing the type of parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSString * type;
+
+/*!
+ * @abstract A string describing the format of the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSString * format;
+
+/*!
+ * @abstract An array of rates for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingStructuredRate *> * structuredRates;
+
+/*!
+ * @abstract An array of current calculated rates for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingCalculatedRate *> * calculatedRates;
+
+/*!
+ * @abstract An array of strings describing the rates for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * rateCard;
+
+/*!
+ * @abstract An array of strings for the phone numbers of the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * phones;
+
+/*!
+ * @abstract An array of strings for the types of payment for the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * paymentTypes;
+
+/*!
+ * @abstract An url for more information about the lot.
+ */
+@property (nonatomic, strong, readwrite) NSURL * url;
+
+/*!
+ * @abstract An bool describing if the lot is currently open.
+ */
+@property (nonatomic, assign, readwrite) BOOL isOpen;
+
+/*!
+ * @abstract An array describing the amenities at the parking lot.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingAmenity *> * amenities;
 
 /*!
  * TODO-DOCUMENT-METHOD

@@ -15,41 +15,6 @@
 #import <Foundation/Foundation.h>
 
 //-----------------------------------------------------------------------------
-#pragma mark Enum Definitions
-
-typedef NS_ENUM (NSUInteger, IXCLParkingReservability)
-{
-    IXCLParkingReservabilityUnknown             = 0,
-    IXCLParkingReservabilityPartlyReservable    = 1,
-    IXCLParkingReservabilityReservable          = 2,
-    IXCLParkingReservabilityNotReservable       = 3,
-    IXCLParkingReservabilityReservationRequired = 4,
-};
-
-typedef NS_ENUM (NSUInteger, IXCLParkingTendency)
-{
-    IXCLParkingTendencyUnknown         = 0,
-    IXCLParkingTendencyFillingQuickly  = 1,
-    IXCLParkingTendencyFilling         = 2,
-    IXCLParkingTendencyFillingSlowly   = 3,
-    IXCLParkingTendencyUnchanging      = 4,
-    IXCLParkingTendencyEmptyingSlowly  = 5,
-    IXCLParkingTendencyEmptying        = 6,
-    IXCLParkingTendencyEmptyingQuickly = 7,
-};
-
-typedef NS_ENUM (NSUInteger, IXCLParkingStatus)
-{
-    IXCLParkingStatusUnknown                = 0,
-    IXCLParkingStatusFull                   = 1,
-    IXCLParkingStatusBusy                   = 2,
-    IXCLParkingStatusVacant                 = 3,
-    IXCLParkingStatusClosed                 = 4,
-    IXCLParkingStatusNoParkingAllowed       = 5,
-    IXCLParkingStatusSpecialConditionsApply = 6,
-};
-
-//-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
 
 /*!
@@ -80,36 +45,12 @@ typedef NS_ENUM (NSUInteger, IXCLParkingStatus)
 @property (nonatomic, assign, readwrite) NSInteger parkingOccupancyPercentage;
 
 /*!
- * @abstract
- *      The rate at which the parking is filling up.
- */
-@property (nonatomic, assign, readwrite) NSInteger fillStateRate;
-
-/*!
- * @abstract
- *      The current status of the parking lot.
- *
- */
-@property (nonatomic, assign, readwrite) IXCLParkingStatus parkingStatus;
-
-/*!
- * @abstract
- *      The occupancy trend for this parking lot.
- */
-@property (nonatomic, assign, readwrite) IXCLParkingTendency tendency;
-
-/*!
- * @abstract
- *      Indicates the type of reservation policy supported by this lot.
- */
-@property (nonatomic, assign, readwrite) IXCLParkingReservability reservability;
-
-
-/*!
  * TODO-DOCUMENT-METHOD
  * @param dictionary A dictionary of parking lot parameters.
+ * @param totalSpaces total number of spaces in the lot
  * @return TODO-DOCUMENT-RETURN
  */
-+ (IXCLParkingLotCurrentCapacity *) currentCapacityFromDictionary: (NSDictionary *) dictionary;
++ (IXCLParkingLotCurrentCapacity *) currentCapacityFromDictionary: (NSDictionary *) dictionary
+                                                      totalSpaces: (NSInteger) totalSpaces;
 
 @end

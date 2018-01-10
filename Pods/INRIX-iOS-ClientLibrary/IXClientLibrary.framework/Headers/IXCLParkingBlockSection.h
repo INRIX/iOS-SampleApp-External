@@ -17,7 +17,10 @@
 #import <Foundation/Foundation.h>
 
 @class IXCLParkingBlockPricingPayment;
-@class IXCLParkingBlockRestriction;
+@class CLLocation;
+@class IXCLParkingStructuredRate;
+@class IXCLParkingBlockAmenity;
+@class IXCLParkingCalculatedRate;
 
 //-----------------------------------------------------------------------------
 #pragma mark Enum Definitions
@@ -41,14 +44,6 @@ typedef NS_ENUM (NSUInteger, IXCLParkingSectionZone)
     IXCLParkingSectionZoneNonPaidParking      = 6,
     IXCLParkingSectionZoneUnrestrictedParking = 7,
     IXCLParkingSectionZoneTimeLimitedParking  = 8,
-};
-
-typedef NS_ENUM (NSUInteger, IXCLParkingSectionOccupancyBucket)
-{
-    IXCLParkingSectionOccupancyBucketUnknown = 0,
-    IXCLParkingSectionOccupancyBucket1       = 1, // > 75% occupied
-    IXCLParkingSectionOccupancyBucket2       = 2,
-    IXCLParkingSectionOccupancyBucket3       = 3, // < 51% occupied
 };
 
 //-----------------------------------------------------------------------------
@@ -90,11 +85,6 @@ typedef NS_ENUM (NSUInteger, IXCLParkingSectionDurationUnits)
 @property (nonatomic, assign, readwrite) NSInteger capacity;
 
 /*!
- * @abstract The list of restrictions applied to the parking section.
- */
-@property (nonatomic, strong, readonly) NSArray <IXCLParkingBlockRestriction *> * restrictions;
-
-/*!
  * @abstract
  *      The dictionary with available payment method names as a key and payment
  *      method details as a value if available.
@@ -107,13 +97,43 @@ typedef NS_ENUM (NSUInteger, IXCLParkingSectionDurationUnits)
 @property (nonatomic, assign, readwrite) IXCLParkingSectionZone parkingZone;
 
 /*!
- * @abstract Indicates the percentage of available (unoccupied) parking spots.
+ * @abstract The points to draw parking section outline.
  */
-@property (nonatomic, assign, readwrite) NSInteger availability;
+@property (nonatomic, strong, readonly) NSArray <CLLocation *> * points;
 
 /*!
- * @abstract Indicates occupancy bucket of a parking section.
+ * @abstract Polyline string for the section geometry.
  */
-@property (nonatomic, assign, readwrite) IXCLParkingSectionOccupancyBucket occupancyBucket;
+@property (nonatomic, strong, readwrite) NSString * geometry;
+
+/*!
+ * @abstract Posted rate information for the section.
+ */
+@property (nonatomic, strong, readwrite) NSArray <NSString *> * rateCard;
+
+/*!
+ * @abstract Structured rate data for the section.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingStructuredRate *> * structuredRates;
+
+/*!
+ * @abstract Calculated rate data for the section.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingCalculatedRate *> * calculatedRates;
+
+/*!
+ * @abstract Amenity objects for the section.
+ */
+@property (nonatomic, strong, readwrite) NSArray <IXCLParkingBlockAmenity *> * amenities;
+
+/*!
+ * @abstract Value representing if the section is currently available.
+ */
+@property (nonatomic, assign, readwrite) BOOL isOpen;
+
+/*!
+ * @abstract Id for the section.
+ */
+@property (nonatomic, strong, readwrite) NSString * segmentID;
 
 @end

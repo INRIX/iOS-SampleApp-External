@@ -43,12 +43,7 @@
  */
 @property (nonatomic, copy, readwrite) NSString * currencyType;
 
-/*!
- * @abstract The description of pricing payment.
- */
-@property (nonatomic, copy, readwrite) NSString * notes;
-
 /// @cond
-+ (NSArray *) pricingPaymentsFromDictionaries: (NSArray *) dictionaries;
++ (NSArray *) pricingPaymentsFromDictionaries: (NSArray *) dictionaries currency: (NSString*) currency;
 
 @end

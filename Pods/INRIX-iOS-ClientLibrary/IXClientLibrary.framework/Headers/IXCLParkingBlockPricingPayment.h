@@ -49,8 +49,8 @@
 @property (nonatomic, assign, readwrite) double amount;
 
 /*!
- * @abstract The currency type.
+ * @abstract The currency.
  */
-@property (nonatomic, copy, readwrite) NSString * currencyType;
+@property (nonatomic, copy, readwrite) NSString * currency;
 
 @end

@@ -38,18 +38,6 @@ typedef NS_OPTIONS (NSUInteger, IXCLParkingLotOptionsParkingType)
                                                      IXCLParkingLotOptionsParkingTypeParkingBlocks),
 };
 
-typedef NS_ENUM (NSUInteger, IXCLParkingLotOptionsSortingOrder)
-{
-    IXCLParkingLotOptionsSortingOrderNone     = 0,
-    IXCLParkingLotOptionsSortingOrderDistance = 1,
-};
-
-typedef NS_ENUM (NSUInteger, IXCLParkingLotOptionsUnitsType)
-{
-    IXCLParkingLotOptionsUnitsTypeMiles  = 0,
-    IXCLParkingLotOptionsUnitsTypeMeters = 1,
-};
-
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
 
@@ -62,15 +50,12 @@ typedef NS_ENUM (NSUInteger, IXCLParkingLotOptionsUnitsType)
 @interface IXCLParkingLotBaseOptions : IXCLBaseOptions <NSCopying>
 
 @property (nonatomic, strong, readwrite) NSDate * arrivalDate;
+@property (nonatomic, assign, readwrite) NSInteger duration;
 @property (nonatomic, assign, readwrite) IXCLParkingLotOptionsParkingType parkingType;
 @property (nonatomic, assign, readwrite) IXCLParkingLotOptionsOutputField outputField;
-@property (nonatomic, assign, readwrite) IXCLParkingLotOptionsSortingOrder sortingOrder;
-@property (nonatomic, assign, readwrite) IXCLParkingLotOptionsUnitsType unitsType;
 
 - (NSString *) parkingTypeAsString;
 
 - (NSString *) parkingOutputFieldAsString;
-
-- (NSString *) sortingOrderAsString;
 
 @end
