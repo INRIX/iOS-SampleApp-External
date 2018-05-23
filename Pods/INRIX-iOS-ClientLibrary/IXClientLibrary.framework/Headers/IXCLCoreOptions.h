@@ -28,22 +28,6 @@ typedef NS_ENUM (NSUInteger, IXCLServerEnvironmentType)
     IXCLServerEnvironmentTypeQA
 };
 
-
-/*!
- * @enum IXCLPHSDataUploadMode
- *
- * @abstract
- *      Describes the frequency with which PHS data is collected and uploaded.
- *
- * - IXCLPHSDataUploadModeRealtime: AKA v6.x behavior.
- * - IXCLPHSDataUploadModeNonRealtime: AKA v7 behavior.
- */
-typedef NS_ENUM(NSUInteger, IXCLPHSDataUploadMode)
-{
-    IXCLPHSDataUploadModeRealtime    = 0,
-    IXCLPHSDataUploadModeNonRealtime = 1
-};
-
 //-----------------------------------------------------------------------------
 #pragma mark Class Declaration
 
@@ -92,11 +76,6 @@ typedef NS_ENUM(NSUInteger, IXCLPHSDataUploadMode)
 @property (nonatomic, assign, readwrite) BOOL tripRecordingEnabled;
 
 /*!
- * Return the current calendar syncing configuration state.
- */
-@property (nonatomic, assign, readwrite) BOOL calendarSyncingEnabled;
-
-/*!
  * A Boolean value indicating whether the core location
  * manager should get updates in the background.
  */
@@ -114,21 +93,6 @@ typedef NS_ENUM(NSUInteger, IXCLPHSDataUploadMode)
  * available.
  */
 @property (nonatomic, assign, readwrite) CLLocationCoordinate2D defaultCoordinates;
-
-/*!
- * Default value, in minutes, of the pre-drive alert interval for uploaded calendar events.
- * If set to nil, the internal SDK default will be used.
- */
-@property (nonatomic, strong, readwrite) NSNumber * calendarEventDefaultAlertInterval;
-
-/*!
- * A flag indicating whether or not to automatically create pre-drive alerts for uploaded
- * calendar events. When set to NO, calendar events are created without
- * pre-drive alerts. When set to YES, calendar events are created with pre-drive alerts
- * using the interval specified in calendarEventDefaultAlertInterval, if defined, or an
- * internal default otherwise.
- */
-@property (nonatomic, assign, readwrite) BOOL calendarEventDefaultAlertsEnabled;
 
 /*!
  * @abstract
@@ -151,15 +115,6 @@ typedef NS_ENUM(NSUInteger, IXCLPHSDataUploadMode)
  *       Defaults to NO.
  */
 @property (nonatomic, assign, readwrite) BOOL deferPermissionsDialogs;
-
-
-/*!
- * @abstract
- *      Controls the frequency data is collected and uploaded.
- * @discussion
- *      Defaults to IXCLPHSDataUploadModeNonRealtime.
- */
-@property (nonatomic, assign, readwrite) IXCLPHSDataUploadMode phsDataUploadMode;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Instance Methods

@@ -126,9 +126,7 @@
 
  @section Trips Trips and Itineraries
  @ref IXCLItineraryEntry\n
- @ref IXCLLearnedTrip\n
  @ref IXCLSavedTrip\n
- @ref IXCLCalendarTrip\n
  @ref IXCLTrip\n
  @ref IXCLTripPoint\n
  @ref IXCLTripSchedule\n
@@ -352,9 +350,7 @@
  @ref IXCLTripController\n
 
  @section b Model Objects
- @ref IXCLLearnedTrip\n
  @ref IXCLSavedTrip\n
- @ref IXCLCalendarTrip\n
  @ref IXCLTrip\n
  @ref IXCLTripPoint\n
  @ref IXCLTripSchedule\n

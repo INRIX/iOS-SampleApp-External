@@ -21,20 +21,16 @@
 
 @class IXCLAnalyticsController;
 @class IXCLAuthController;
-@class IXCLCalendarEventController;
 @class IXCLCamerasController;
 @class IXCLCoreResponse;
 @class IXCLDriveTimeAlertsController;
-@class IXCLEDustController;
 @class IXCLGasStationsController;
 @class IXCLGeocodeController;
 @class IXCLIncidentsController;
 @class IXCLItineraryController;
 @class IXCLLocation;
 @class IXCLLocationsController;
-@class IXCLMobileStatController;
 @class IXCLParkingLotsController;
-@class IXCLPHSController;
 @class IXCLProductsController;
 @class IXCLNetworkReachabilityController;
 @class IXCLRouteTravelTimesController;
@@ -42,9 +38,9 @@
 @class IXCLTripController;
 @class IXCLSDKConfigController;
 @class IXCLSearchController;
+@class IXCLTrafficColorController;
 @class IXCLTrafficQualityController;
 @class IXCLTrafficTilesController;
-@class IXCLTripLibraryController;
 @class IXCLUserPropertiesController;
 @class IXCLDangerousSlowdownsController;
 @class IXCLSpeedLimitController;
@@ -57,9 +53,6 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType);
  * @abstract The version of this library.
  */
 FOUNDATION_EXPORT NSString * const IXCLCoreVersion;
-
-//-----------------------------------------------------------------------------
-#pragma mark - Protocol Declaration
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
@@ -290,6 +283,14 @@ FOUNDATION_EXPORT NSString * const IXCLCoreVersion;
  */
 @property (nonatomic, strong, readonly) IXCLTripController * tripController;
 
+/*!
+ * @abstract
+ *      The traffic color controller to be used.
+ * @discussion
+ *      The traffic color controller provides functionality for reporting
+ *      wrong traffic color information to the server.
+ */
+@property (nonatomic, strong, readonly) IXCLTrafficColorController *trafficColorController;
 
 /*!
  * @abstract

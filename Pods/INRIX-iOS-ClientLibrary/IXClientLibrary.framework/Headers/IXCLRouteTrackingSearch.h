@@ -104,7 +104,7 @@ FOUNDATION_EXPORT CLLocationDistance const IXCLRouteTrackingDefaultInterpolation
  * @abstract
  *      flag for if the search controller is currently tracking
  */
-@property (nonatomic, assign, readwrite) BOOL isTracking;
+@property (atomic, assign, readwrite) BOOL isTracking;
 
 
 /*!

@@ -16,7 +16,6 @@
 
 #import "IXCLTrip.h"
 #import "IXCLTripSchedule.h"
-#import "IXCLLearnedTrip.h"
 
 /*!
  * @class IXCLSavedTrip
@@ -92,12 +91,5 @@
                                destination: (IXCLTripPoint *) destination
                                  waypoints: (NSArray *) waypoints
                                   schedule: (IXCLTripSchedule *) schedule;
-
-/*!
- * @abstract Initializes an instance of the SavedTrip class with a learned trip.
- * @param learnedTrip A learned trip that the system has created for the user.
- * @return An initialized SavedTrip object.
- */
-- (instancetype) initWithLearnedTrip: (IXCLLearnedTrip *) learnedTrip;
 
 @end

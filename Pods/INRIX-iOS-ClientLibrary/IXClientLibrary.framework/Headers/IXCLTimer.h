@@ -67,7 +67,7 @@ typedef NS_ENUM (NSUInteger, IXCLTimerState)
 /*!
  * @abstract The current state of the timer.
  */
-@property (nonatomic, assign, readonly) IXCLTimerState state;
+@property (readonly) IXCLTimerState state;
 
 /*!
  * @abstract The timer's name, for diagnostic/debugging purposes
@@ -111,7 +111,7 @@ typedef NS_ENUM (NSUInteger, IXCLTimerState)
  * @param factoryBlock
  *      The block to call to allocate alternal IXCLTimer objects.
  */
-+ (void) registerFactory: (id (^)()) factoryBlock;
++ (void) registerFactory: (id (^)(void)) factoryBlock;
 
 /*!
  * @abstract

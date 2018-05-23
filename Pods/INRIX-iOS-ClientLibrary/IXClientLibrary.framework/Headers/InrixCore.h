@@ -18,7 +18,6 @@
 #import "IXCLCoreOptions.h"
 #import "IXCLCurrentLocationManager.h"
 
-
 #import "IXCLAuthController.h"
 #import "IXCLCamerasController.h"
 #import "IXCLCoreResponse.h"
@@ -36,6 +35,7 @@
 #import "IXCLRoutesController.h"
 #import "IXCLSpeedLimitController.h"
 #import "IXCLTripController.h"
+#import "IXCLTrafficColorController.h"
 #import "IXCLTrafficQualityController.h"
 #import "IXCLTrafficTilesController.h"
 #import "IXCLNetworkReachabilityController.h"
@@ -57,7 +57,6 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
 {
     IXCLCoreServiceTypeLocationWhenInUse,
     IXCLCoreServiceTypeLocationAlways,
-    IXCLCoreServiceTypeCalendar,
     IXCLCoreServiceTypeMotion
 };
 
@@ -292,6 +291,14 @@ typedef NS_ENUM (NSInteger, IXCLCoreServiceType)
  */
 @property (nonatomic, strong, readonly) id<IXCLTripControllerProtocol> tripController;
 
+/*!
+ * @abstract
+ *      The traffic color controller to be used.
+ * @discussion
+ *      The traffic color controller provides functionality for reporting
+ *      wrong traffic color information to the server.
+ */
+@property (nonatomic, strong, readonly) id<IXCLTrafficColorControllerProtocol> trafficColorController;
 
 /*!
  * @abstract

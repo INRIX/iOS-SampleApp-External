@@ -30,6 +30,6 @@
 /*!
  * @abstract Maneuver sequence.
  */
-@property (nonatomic, assign, readwrite) NSUInteger sequence;
+@property (atomic, assign, readwrite) NSUInteger sequence;
 
 @end

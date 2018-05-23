@@ -28,18 +28,6 @@ typedef void (^ IXCLBaseControllerResponseBlock) (id result, IXCLCoreResponse * 
 typedef BOOL (^ IXCLBaseControllerShouldRetryBlock) (NSError * error);
 
 //-----------------------------------------------------------------------------
-#pragma mark Global Exports
-
-/*!
- * @abstract
- *      An NSNotification name posted by NSNotificationCenter when the SDK
- *      configuration parameters are changed.
- * @discussion
- *      NSNotification 'object' will return IXCLSDKConfig object.
- */
-FOUNDATION_EXPORT NSString * const IXCLSDKConfigurationParametersDidChangeNotification;
-
-//-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
 
 /* @private
@@ -165,14 +153,5 @@ FOUNDATION_EXPORT NSString * const IXCLSDKConfigurationParametersDidChangeNotifi
  */
 - (BOOL) shouldAbortRetryForError: (NSError *) error
                   abortErrorCodes: (NSSet *) abortErrorCodes;
-
-/*!
- * @abstract
- *      Notifies the controller that its configuration parameters should be updated.
- * @discussion
- *      Subclasses of this base class must call the `super` implementation first.
- * @param notification The notification to post on SDK Configuration changes.
- */
-- (void) onSDKConfigurationParametersDidChange: (NSNotification *) notification;
 
 @end

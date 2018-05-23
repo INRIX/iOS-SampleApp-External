@@ -1,1 +1,0 @@
-../../../../INRIX-iOS-ClientLibrary/IXClientLibrary.framework/Headers/IXCLLearnedTrip.h

@@ -20,7 +20,6 @@ FOUNDATION_EXPORT NSString * const IXCLSavedTripRoutePreferenceKey;
 
 #import "IXCLBaseController.h"
 #import "IXCLSavedTripOptions.h"
-#import "IXCLUpdateNotificationOptions.h"
 #import "IXCLGetSavedTripsResponse.h"
 
 
@@ -67,14 +66,6 @@ extern const int IXCLSavedTripMaxPaypoints;
  */
 - (void) getTripsWithOptions: (IXCLSavedTripOptions *) options
                   completion: (void (^)(IXCLGetSavedTripsResponse * getSavedTripsResponse, IXCLCoreResponse * coreResponse)) completion;
-
-/*!
- * @abstract Update pre-drive notification settings for a user calendar.
- * @param options A description of the notification settings to be updated.
- * @param completion The completion block to be invoked when the operation completes.
- */
-- (void) updatePreDriveNotification: (IXCLUpdateNotificationOptions *) options
-                         completion: (void (^)(IXCLCoreResponse * coreResponse)) completion;
 
 @end
 

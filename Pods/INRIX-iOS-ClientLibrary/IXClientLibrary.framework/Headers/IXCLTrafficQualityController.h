@@ -15,11 +15,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "IXCLBaseControllerWithCache.h"
 
-
 @class IXCLCoreResponse;
 @class IXCLTrafficQuality;
 @class IXCLTrafficQualityOptions;
-
 
 //-----------------------------------------------------------------------------
 #pragma mark - Protocol Declaration
@@ -54,11 +52,6 @@
  */
 - (void) requestTrafficQualityWithOptions: (IXCLTrafficQualityOptions *) options
                                completion: (void (^)(IXCLTrafficQuality * trafficQuality, IXCLCoreResponse * coreResponse)) completion;
-
-/*!
- * @abstract Reports back to the server that the traffic color at the current location is incorrect.
- */
-- (void) reportWrongTraffic;
 
 @end
 

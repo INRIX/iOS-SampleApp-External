@@ -51,7 +51,7 @@ FOUNDATION_EXPORT NSString * const IXCLAuthControllerUserAccountUserInfoKey;
  * @abstract
  *      User account of the currently signed-in user.
  */
-@property (nonatomic, strong, readonly) IXCLUserAccount * userAccount;
+@property (atomic, strong, readonly) IXCLUserAccount * userAccount;
 
 /*!
  * @abstract

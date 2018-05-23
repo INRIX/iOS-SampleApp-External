@@ -46,7 +46,6 @@ class ApplicationCore {
 
         coreOptions.backgroundLocationUpdates = false
         coreOptions.userLocationUpdatesEnabled = false
-        coreOptions.calendarSyncingEnabled = false
         coreOptions.tripRecordingEnabled = false
 
         let inrixCore = IXCLCreateInrixCore(coreOptions)

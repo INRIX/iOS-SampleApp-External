@@ -25,8 +25,6 @@
 typedef NS_ENUM (NSUInteger, IXCLTripType)
 {
     IXCLTripTypeSaved = 0,
-    IXCLTripTypeLearned,
-    IXCLTripTypeCalendar
 };
 
 
@@ -93,10 +91,5 @@ typedef NS_ENUM (NSUInteger, IXCLTripType)
  * @abstract Indicates whether the schedule notification is enabled.
  */
 @property (nonatomic, assign, readonly) BOOL isNotificationEnabled;
-
-/*!
- * @abstract List of Trips which are associated with this ItineraryEntry
- */
-@property (nonatomic, strong, readonly) NSArray * associatedTrips;
 
 @end
