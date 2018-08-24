@@ -49,6 +49,7 @@ typedef NSComparisonResult (^ IXCLIncidentsComparator)(IXCLIncident * incident1,
  * @constant IXCLIncidentsFilterIncludePolice       Include police incidents.
  * @constant IXCLIncidentsFilterIncludeHazard       Include hazard incidents.
  * @constant IXCLIncidentsFilterIncludeRoadClosure  Include road closures.
+ * @constant IXCLIncidetnsFilterIncludeWeather      Include weather incidents.
  * @constant IXCLIncidentsFilterIncludeAll          Include all filters.
  */
 typedef NS_OPTIONS (NSInteger, IXCLIncidentsFilter)
@@ -62,7 +63,8 @@ typedef NS_OPTIONS (NSInteger, IXCLIncidentsFilter)
     IXCLIncidentsFilterIncludeHazard       = (1 << 5),
     IXCLIncidentsFilterIncludeRoadClosure  = (1 << 6),
     IXCLIncidentsFilterIncludeLaneClosure  = (1 << 7),
-    IXCLIncidentsFilterIncludeAll          = -1,
+    IXCLIncidentsFilterIncludeWeather      = (1 << 8),
+    IXCLIncidentsFilterIncludeAll          = -1
 };
 
 //-----------------------------------------------------------------------------

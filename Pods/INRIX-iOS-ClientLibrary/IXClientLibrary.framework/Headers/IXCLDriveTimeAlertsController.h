@@ -66,19 +66,11 @@ FOUNDATION_EXPORT NSString * const IXCLRouteTrackingStatusChangedNotification;
 
 /*!
  * @abstract
- *      Incidents-on-route notification message.
+ *      Drive alerts notification message.
  * @discussion
- *      Data passed with the notification is a NSArray containing the incidents.
+ *      Data passed with the notification is a NSArray containing the drive alerts.
  */
-FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertsIncidentsOnRouteNotification;
-
-/*!
- * @abstract
- *      Parking-on-route notification message.
- * @discussion
- *      Data passed with the notification is a NSArray containing the parking.
- */
-FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertsParkingOnRouteNotification;
+FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertsNotification;
 
 /*!
  * @abstract Key values for the route status changed message dictionary data.
@@ -88,16 +80,10 @@ FOUNDATION_EXPORT NSString * const IXCLRouteTrackingStatusLocationKey;
 FOUNDATION_EXPORT NSString * const IXCLRouteTrackingStatusStatusKey;
 
 /*!
- * @abstract Key values for the incidents-on-route message dictionary data.
+ * @abstract Key values for the drive-time alerts userInfo dictionary data.
  */
-FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertIncidentOnRouteCurrentRouteKey;
-FOUNDATION_EXPORT NSString * const ISCLDriveTimeAlertIncidentOnRouteIncidentsArrayKey;
-
-/*!
- * @abstract Key values for the parking-on-route message dictionary data.
- */
-FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertParkingOnRouteCurrentRouteKey;
-FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertParkingOnRouteParkingArrayKey;
+FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertsCurrentRouteKey;
+FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertsArrayKey;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Protocol Declaration
@@ -157,34 +143,35 @@ FOUNDATION_EXPORT NSString * const IXCLDriveTimeAlertParkingOnRouteParkingArrayK
 
 /*!
  * @abstract
- *      Pause alerting on incidents.
+ *      Pause alerting.
  * @discussion
  *      Pausing allows the state of the controller to be maintained while
  *      preventing any notifications from being delivered. Does nothing if
  *      controller is not in the IXCLDriveTimeAlertsStateStarted state.
  */
-- (void) pauseAlertingOnIncidents;
+- (void) pause;
 
 /*!
  * @abstract
- *      Resume alerting on incidents.
+ *      Resume alerting.
  * @discussion
  *      The controller will resume notifications. Does nothing if controller
  *      is not in the IXCLDriveTimeAlertsStatePaused state.
  */
-- (void) resumeAlertingOnIncidents;
+- (void) resume;
 
 /*!
- * @abstract Stops alerting on incidents.
+ * @abstract Stops alerting.
  */
-- (void) stopAlertingOnIncidents;
+- (void) stop;
 
 /*!
  * @abstract Update the route to be alerted on.
  *
  * @param route Route on which drive time alerts need to be tracked.
  */
-- (void) updateRouteForAlertingOnIncidents: (IXCLRoute *) route;
+
+- (void) updateRoute: (IXCLRoute *) route;
 
 @end
 

@@ -101,6 +101,10 @@ FOUNDATION_EXPORT NSString * const IXCLUnsupportedAPIException;
  */
 FOUNDATION_EXPORT NSString * const IXCLNilCompletionHandlerException;
 
+/*!
+ * @abstract Indicates that a method which supposed to be abstract was called.
+ */
+FOUNDATION_EXPORT NSString * const IXCLAbstractMethodException;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Category Declaration
@@ -180,6 +184,15 @@ FOUNDATION_EXPORT NSString * const IXCLNilCompletionHandlerException;
  * @param supportedAPI   A selector identifying the supported API.
  */
 + (void) ixcl_raiseUnsupportedAPI: (SEL) unsupportedAPI insteadUse: (SEL) supportedAPI;
+
+/*!
+ * @abstract
+ *      A convenience method that creates and raises an
+ *      IXCLAbstractMethodAPIException.
+ *
+ * @param methodSelector A selector identifying the abstractMethod.
+ */
++ (void) ixcl_raiseAbstractMethod: (SEL)methodSelector;
 
 /*!
  * @abstract

@@ -47,7 +47,7 @@
 /*!
  * @abstract Direction of travel on road for which event occurs.
  */
-@property (nonatomic, copy, readwrite) NSString * direction;
+@property (nonatomic, assign, readwrite) IXCLIncidentDirection direction;
 
 /*!
  * @abstract Textual description of the type of event.

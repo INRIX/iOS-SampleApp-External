@@ -14,17 +14,16 @@
 
 #import <Foundation/Foundation.h>
 #import "IXCLRouteTrackingController.h"
-
+#import "IXCLIncidentsController.h"
+#import "IXCLDriveTimeAlert.h"
 
 @class IXCLIncident;
 @class IXCLParkingLot;
 @class IXCLRoute;
 
-typedef BOOL (^ IXCLDriveTimeAlertsIncidentFilterBlock) (IXCLIncident * incident);
-typedef void (^ IXCLDriveTimeAlertsNotificationBlock) (NSArray * incidents, NSError * error);
-typedef BOOL (^ IXCLDriveTimeAlertsParkingFilterBlock) (IXCLParkingLot * parking);
-typedef void (^ IXCLDriveTimeAlertsParkingNotificationBlock) (NSArray * parking, NSError * error);
-
+typedef BOOL (^ IXCLDriveTimeAlertsFilter) (IXCLDriveTimeAlert * alert);
+typedef void (^ IXCLDriveTimeAlertsNotificationBlock) (NSArray <IXCLDriveTimeAlert *> * alerts, NSError * error);
+typedef NSComparisonResult (^ IXCLDriveTimeAlertsComparator)(IXCLDriveTimeAlert *alert1, IXCLDriveTimeAlert *alert2);
 
 //-----------------------------------------------------------------------------
 #pragma mark - Global Exports
@@ -43,6 +42,36 @@ FOUNDATION_EXPORT NSTimeInterval const IXCLDriveTimeAlertsOptionsNotificationInt
  */
 FOUNDATION_EXPORT CGFloat const IXCLDriveTimeAlertsOptionsSpeedFactorUseDefault;
 
+/*!
+ * @abstract
+ *      Value which indicates the angle relative to current course to filter out irrelevant alerts.
+ */
+FOUNDATION_EXPORT CGFloat const IXCLDriveTimeAlertConeAheadDefaultAngle;
+
+/*!
+ * @abstract
+ *      Represents invalid angle for Direction Cone.
+ * @discussion
+ *      Specify None Angle for cone to include any direction.
+ */
+FOUNDATION_EXPORT CGFloat const IXCLDirectionConeAngleNone;
+
+/*!
+ * @abstract
+ *      Specifies default initial distance requirement for alerting to start.
+ *      Alerts will be suppresed until user moves far enough from DTA start
+ *      location.
+ *      Value is 100 meters.
+ */
+FOUNDATION_EXPORT CLLocationDistance const IXCLDefaultAlertingStartDistance;
+
+/*!
+ * @abstract
+ *      Specifies default minimum time interval for alert to be shown again.
+ *      Value is 10 minutes.
+ */
+FOUNDATION_EXPORT NSTimeInterval const IXCLDefaultAlertsResetInterval;
+
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
 
@@ -54,11 +83,6 @@ FOUNDATION_EXPORT CGFloat const IXCLDriveTimeAlertsOptionsSpeedFactorUseDefault;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Properties
-
-/*!
- * @abstract Route on which drive time alerts need to be tracked.
- */
-@property (nonatomic, strong, readwrite) IXCLRoute * route;
 
 /*!
  * @abstract
@@ -81,42 +105,51 @@ FOUNDATION_EXPORT CGFloat const IXCLDriveTimeAlertsOptionsSpeedFactorUseDefault;
 @property (nonatomic, assign, readwrite) CGFloat speedFactor;
 
 /*!
- * @abstract Filter to filter out incidents.
+ * @abstract Filter to filter out alerts.
  */
-@property (nonatomic, copy, readwrite) IXCLDriveTimeAlertsIncidentFilterBlock isIncidentAllowedFilter;
+@property (nonatomic, copy, readwrite) IXCLDriveTimeAlertsFilter isAlertAllowedFilter;
 
 /*!
  * @abstract
- *      Incident comparator which will be used to sort incidents before
- *      returning a set of incidents.
+ *      Alerts comparator which will be used to sort alerts before
+ *      returning a set of alerst.
  */
-@property (nonatomic, copy, readwrite) NSComparator comparator;
+@property (nonatomic, copy, readwrite) IXCLDriveTimeAlertsComparator comparator;
 
 /*!
  * @abstract
- *      Incidents alerts notification block.
+ *      Alerts notification block.
  * @discussion
- *      This notification block will return the list of incidents to be
- *      alerted, or error if any.
+ *      This notification block will return the list of alerts to be
+ *      sent, or error if any.
  */
 @property (nonatomic, copy, readwrite) IXCLDriveTimeAlertsNotificationBlock notificationBlock;
 
 /*!
  * @abstract
- *      Parking alerts notification block.
+ *      Angle relative to current course which determines whether
+ *      some point of interest should trigger an alert.
  * @discussion
- *      This notification block will return the list of parking to be
- *      alerted, or error if any.
+ *      Alerts outside the angle will be ignored.
+ *      Defaults to IXCLDriveTimeAlertConeAheadDefaultAngle.
  */
-@property (nonatomic, copy, readwrite) IXCLDriveTimeAlertsParkingNotificationBlock parkingNotificationBlock;
+@property (nonatomic, assign, readwrite) CGFloat coneAheadAngle;
 
 /*!
  * @abstract
- *      Route progression status tracking notification block.
- * @discussion
- *      This notification block will return the route tracking status.
+ *      Specifies initial distance requirement for alerting to start.
+ *      Alerts will be suppresed until user moves far enough from DTA start
+ *      location.
+ *      Default value is IXCLDefaultAlertingStartDistance.
  */
-@property (nonatomic, copy, readwrite) IXCLRouteTrackingStatusNotificationBlock routeTrackingStatusNotificationBlock;
+@property (nonatomic, assign, readwrite) CLLocationDistance alertsStartDistance;
+
+/*!
+ * @abstract
+ *      Specifies minimum time interval for alert to be shown again.
+ *      Default value is IXCLDefaultAlertsResetInterval.
+ */
+@property (nonatomic, assign, readwrite) NSTimeInterval alertsResetInterval;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Methods

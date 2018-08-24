@@ -14,6 +14,10 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+//-----------------------------------------------------------------------------
+#pragma mark - Type Aliases
+
+typedef double IXCLMilesPerHour;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Global Exports
@@ -30,6 +34,51 @@ FOUNDATION_EXPORT NSString * const IXCLCoordinateStringSeparator;
 
 CLLocationCoordinate2D CLLocationCoordinate2DFromGeoJsonArray(NSArray * array);
 
+//-----------------------------------------------------------------------------
+#pragma mark - Direction Bound
+
+/*!
+ * @abstract Direction bound for location.
+ * @discussion Describes type of location course in descrete way.
+ *
+ * @constant IXCLDirectionBoundNone
+ *      Course information is unavailable.
+ * @constant IXCLDirectionBoundNorth
+ *      Location course indicates movement in north direction
+ *      (course is more than 337.5 degrees, or less than 22.5 degrees).
+ * @constant IXCLDirectionBoundEast
+ *      Location course indicates movement in east direction.
+ *      Course is within (67.5; 112.5) degrees range.
+ * @constant IXCLDirectionBoundSouth
+ *      Location course indicates movement in south direction.
+ *      Course is within (157.5; 202.5) degrees range.
+ * @constant IXCLDirectionBoundWest
+ *      Location course indicates movement in west direction.
+ *      Course is within (247.5; 292.5) degrees range.
+ * @constant IXCLDirectionBoundNorthEast
+ *      Location course indicates movement in northeast direction.
+ *      Course is within [22.5; 67.5] degrees range.
+ * @constant IXCLDirectionBoundSouthEast
+ *      Location course indicates movement in southeast direction.
+ *      Course is within [112.5; 157.5] degrees range.
+ * @constant IXCLDirectionBoundSouthWest
+ *      Location course indicates movement in southwest direction.
+ *      Course is within [202.5; 247.5] degrees range.
+ * @constant IXCLDirectionBoundNorthWest
+ *      Location course indicates movement in northwest direction.
+ *      Course is within [292.5; 337.5] degrees range.
+ */
+typedef NS_ENUM(NSInteger, IXCLDirectionBound) {
+    IXCLDirectionBoundNone = 0,
+    IXCLDirectionBoundNorth = 1 << 0,
+    IXCLDirectionBoundEast = 1 << 1,
+    IXCLDirectionBoundSouth = 1 << 2,
+    IXCLDirectionBoundWest = 1 << 3,
+    IXCLDirectionBoundNorthEast = IXCLDirectionBoundNorth | IXCLDirectionBoundEast,
+    IXCLDirectionBoundSouthEast = IXCLDirectionBoundSouth | IXCLDirectionBoundEast,
+    IXCLDirectionBoundSouthWest = IXCLDirectionBoundSouth | IXCLDirectionBoundWest,
+    IXCLDirectionBoundNorthWest = IXCLDirectionBoundNorth | IXCLDirectionBoundWest
+};
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Cateogry Declaration
@@ -288,7 +337,7 @@ CLLocationCoordinate2D CLLocationCoordinate2DFromGeoJsonArray(NSArray * array);
  *
  * @return The speed in miles per hour as a double.
  */
-+ (double) ixcl_speedInMilesPerHour: (CLLocationSpeed) speed;
++ (IXCLMilesPerHour) ixcl_speedInMilesPerHour: (CLLocationSpeed) speed;
 
 /*!
  * @abstract
@@ -421,5 +470,15 @@ CLLocationCoordinate2D CLLocationCoordinate2DFromGeoJsonArray(NSArray * array);
  */
 + (NSString *) ixcl_quadkeyForCoordinate: (CLLocationCoordinate2D) coordinate
                                zoomLevel: (uint) zoomLevel;
+
+/*!
+ * @abstract
+ *      Returns the Direction bound for location based on it's course.
+ *
+ * @return
+ *      Direction bound value.
+ */
+- (IXCLDirectionBound) directionBound;
+
 
 @end

@@ -19,8 +19,8 @@
 
 @class CLLocation;
 @class IXCLBoundingBox;
+@class IXCLDangerousSlowdown;
 @class IXCLRouteSummary;
-
 
 //-----------------------------------------------------------------------------
 #pragma mark - Enum Definitions
@@ -45,6 +45,18 @@ typedef NS_ENUM (NSInteger, IXCLRouteQuality)
     IXCLRouteQualityClosed    = 255
 };
 
+//-----------------------------------------------------------------------------
+#pragma mark - Global Exports
+
+
+/*!
+ * @abstract
+ *      Notification sent when tracking controller updates slowdowns data for corresponding route object.
+ * @discussion
+ *      Data passed with the notification is a route with updated slowdowns.
+ */
+
+FOUNDATION_EXPORT NSString * const IXCLRouteSlowdownsUpdatedForRouteNotification;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Class Declaration
@@ -214,6 +226,13 @@ typedef NS_ENUM (NSInteger, IXCLRouteQuality)
  * @abstract The origin that was originally requested for this route.
  */
 @property (nonatomic, assign, readwrite) CLLocationCoordinate2D requestOrigin;
+
+/*!
+ * @abstract
+ *  Set of dangerous slowdowns along route.
+ *  May change over time and be nil, if route tracking is not activated.
+ */
+@property (readonly) NSSet <IXCLDangerousSlowdown *> *slowdowns;
 
 //-----------------------------------------------------------------------------
 #pragma mark - Methods

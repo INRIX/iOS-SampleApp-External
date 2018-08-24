@@ -5,11 +5,11 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
-  - FBSDKCoreKit (4.33.0):
+  - FBSDKCoreKit (4.35.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.33.0):
+  - FBSDKLoginKit (4.35.0):
     - FBSDKCoreKit
-  - INRIX-iOS-ClientLibrary (8.0.0)
+  - INRIX-iOS-ClientLibrary (9.0.0)
 
 DEPENDENCIES:
   - FBSDKLoginKit
@@ -24,10 +24,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
-  FBSDKCoreKit: 572b047a7e029bc44542bcf8a59414e7ff2b543e
-  FBSDKLoginKit: 88cb456349cfb3b554427ce4f8b43729d85dfb40
-  INRIX-iOS-ClientLibrary: af00803c794f5a5918896441c1e14d94803e7f14
+  FBSDKCoreKit: 1a5b2e3ceb5ca827a53c54aa5f4a3480efff80d2
+  FBSDKLoginKit: 00a3d65d1226852f9d76dcddff01981e5e6d9c38
+  INRIX-iOS-ClientLibrary: 5a9ff1267c1bb773e3df9e27057c5b0c84de38cb
 
 PODFILE CHECKSUM: 8a6ce10d258d95846d19433093dc548ae2aa1218
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.5.3

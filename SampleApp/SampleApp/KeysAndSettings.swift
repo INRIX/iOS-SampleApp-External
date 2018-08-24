@@ -17,7 +17,6 @@ import Foundation
 import UIKit
 
 struct KeysAndSettings {
-
     static let applicationId: String = <#"INRIX Application Id"#>
     static let applicationKey: String = <#"INRIX Application Key"#>
 

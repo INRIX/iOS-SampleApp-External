@@ -213,8 +213,7 @@ typedef NS_ENUM (NSInteger, IXCLClientErrorCode)
     IXCLClientErrorAlertsNotificationBlockRequired,
     IXCLClientErrorRoutesNotificationBlockRequired,
     IXCLClientErrorInvalidRoute,
-
-    // Configuration controller (has no special errors yet)
+    IXCLClientErrorInvalidConeAheadAngle,
 
     // Auth controller (has no special errors)
 

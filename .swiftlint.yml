@@ -1,0 +1,6 @@
+disabled_rules:
+  - line_length
+  - variable_name
+  - closure_parameter_position
+  - colon
+  - unused_closure_parameter

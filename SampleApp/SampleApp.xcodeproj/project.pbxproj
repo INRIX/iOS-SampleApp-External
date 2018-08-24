@@ -601,7 +601,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -633,6 +633,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inrixInternal.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e6d8c7a4-635b-48b1-87f4-6bbb9e3ed5c5";
+				PROVISIONING_PROFILE_SPECIFIER = "SampleApp Dev";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp/Support Files/SampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
@@ -649,6 +651,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.inrixInternal.SampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4379951e-7d82-46e2-a0a8-95d5517599a4";
+				PROVISIONING_PROFILE_SPECIFIER = "XC: * Inrix Enterprise";
 				SWIFT_OBJC_BRIDGING_HEADER = "SampleApp/Support Files/SampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

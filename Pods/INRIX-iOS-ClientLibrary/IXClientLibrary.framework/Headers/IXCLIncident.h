@@ -45,6 +45,8 @@
  *      Incident describes an accident but could also describe numerous other
  *      types of incidents, further described by the incident code
  *      (IXCLIncidentEventCode).
+ * @constant IXCLIncidentTypeWeather
+ *      Incident representing bad weather condition for the road.
  * @constant IXCLIncidentTypePolice
  *      Incident describes the location of police, typically reported by a
  *      user.
@@ -64,6 +66,7 @@ typedef NS_ENUM (NSUInteger, IXCLIncidentType)
     IXCLIncidentTypeEvent           = 2,
     IXCLIncidentTypeCongestion      = 3,
     IXCLIncidentTypeAccident        = 4,
+    IXCLIncidentTypeWeather         = 5,
     IXCLIncidentTypePolice          = 6,
     IXCLIncidentTypeFixedCameraTrap = 7,
     IXCLIncidentTypeHazard          = 8,
@@ -90,12 +93,12 @@ typedef NS_ENUM (NSUInteger, IXCLIncidentType)
  */
 typedef NS_ENUM (NSUInteger, IXCLIncidentDirection)
 {
-    IXCLIncidentDirectionEastbound  = 0,
-    IXCLIncidentDirectionNorthbound = 1,
-    IXCLIncidentDirectionSouthbound = 2,
-    IXCLIncidentDirectionWestbound  = 3,
-    IXCLIncidentDirectionUnknown    = 4,
-    IXCLIncidentDirectionBothWays   = 5
+    IXCLIncidentDirectionUnknown    = 0,
+    IXCLIncidentDirectionEastbound,
+    IXCLIncidentDirectionNorthbound,
+    IXCLIncidentDirectionSouthbound,
+    IXCLIncidentDirectionWestbound,
+    IXCLIncidentDirectionBothWays
 
 };
 

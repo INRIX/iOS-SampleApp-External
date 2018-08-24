@@ -331,6 +331,24 @@
 /*!
  * @abstract
  *      Returns an INRIX Client NSError with the code set to
+ *      IXCLClientErrorAPINotAvailable.
+ * @discussion
+ *      The following entries will be added to the userInfo dictionary:
+ *      - IXCLErrorInfoKeyNameKey - The key name..
+ *      - NSLocalizedDescriptionKey - Describes the error in text.
+ *
+ * @param methodSelector The abstract method selector.
+ *
+ * @return
+ *      NSError with the INRIX Client error domain and with the code set to
+ *      IXCLClientErrorAPINotAvailable.
+ */
++ (NSError *) ixcl_clientErrorForAbstractMethod: (SEL)methodSelector;
+
+
+/*!
+ * @abstract
+ *      Returns an INRIX Client NSError with the code set to
  *      IXCLClientErrorCompletionHandlerRequired.
  * @discussion
  *      The following entries will be added to the userInfo dictionary:
